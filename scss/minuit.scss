@@ -1,0 +1,30 @@
+// Import utilities.
+@import 'utils/typography';
+@import 'utils/colors';
+@import 'utils/mixins';
+@import 'utils/variables';
+
+/* Global styles */
+@import 'global/window';
+@import 'global/grid';
+@import 'global/flex';
+
+/* Styles limited to minuit sheets */
+.minuit {
+  @import 'components/forms';
+  @import 'components/resource';
+  @import 'components/tabs';
+  @import 'components/items';
+}
+
+.chat-message {
+  background: url('../images/background.png');
+  background-position: center;
+  .dice-formula, .dice-total{
+    border:none;
+    background-color:$c-white;
+  }
+  .dice-roll .dice-tooltip {
+    display: block !important;
+  }
+}

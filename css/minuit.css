@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+/* Global styles */
+.window-app {
+  font-family: "Roboto", sans-serif;
+}
+
+.window-app .window-content {
+  background: #ececee;
+}
+
+.window-app .window-content input, .window-app .window-content textarea {
+  color: #242021;
+  border: none;
+  border-bottom: 1px solid #242021;
+  border-radius: 0px;
+  background-color: #e5e5e7;
+}
+
+.window-app.sheet {
+  font-family: "Unica One", serif;
+}
+
+.window-app.sheet .window-content {
+  background: url("../images/background.png");
+}
+
+.window-app.sheet input[data-dtype="Number"] {
+  background-color: #fff;
+}
+
+.rollable:hover, .rollable:focus {
+  color: #000;
+  text-shadow: 0 0 10px red;
+  cursor: pointer;
+}
+
+.grid,
+.grid-2col {
+  display: grid;
+  grid-column: span 2 / span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.grid-3col {
+  grid-column: span 3 / span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4col {
+  grid-column: span 4 / span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-5col {
+  grid-column: span 5 / span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-6col {
+  grid-column: span 5 / span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-7col {
+  grid-column: span 7 / span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-8col {
+  grid-column: span 8 / span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-9col {
+  grid-column: span 9 / span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-10col {
+  grid-column: span 10 / span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-11col {
+  grid-column: span 11 / span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid-12col {
+  grid-column: span 12 / span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  background-color: #e5e5e7;
+}
+
+.flex-group-left {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.flex-group-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* Styles limited to minuit sheets */
+.minuit .item-form {
+  font-family: "Unica One", serif;
+}
+
+.minuit .sheet-header {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 210px;
+  flex: 0 0 210px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.minuit .sheet-header .profile-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  max-height: 200px;
+  max-width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.minuit .sheet-header .header-fields {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.minuit .sheet-header h1.charname {
+  height: 50px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+}
+
+.minuit .sheet-header h1.charname input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.minuit .sheet-tabs {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+}
+
+.minuit .sheet-body,
+.minuit .sheet-body .tab,
+.minuit .sheet-body .tab .editor {
+  height: 100%;
+}
+
+.minuit .tox .tox-editor-container {
+  background: #fff;
+}
+
+.minuit .tox .tox-edit-area {
+  padding: 0 8px;
+}
+
+.minuit .aspect-titre {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100px;
+  flex: 1 1 100px;
+  letter-spacing: 0.1em;
+}
+
+.minuit .sheet-body ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.minuit .sheet-body input[type="text"], .minuit .sheet-body textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.minuit .sheet-body label {
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+.minuit .sheet-body .expertise-name {
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.minuit .sheet-body input[data-dtype="Number"] {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20px;
+  flex: 0 0 20px;
+  text-align: center;
+}
+
+.minuit .sheet-body input[data-dtype="String"] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.minuit .sheet-body .expertise-valeurs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.minuit .sheet-body .expertise-valeurs span {
+  border: none;
+  border-bottom: 1px solid #242021;
+  border-radius: 0px;
+  background-color: #e5e5e7;
+  line-height: 24px;
+}
+
+.minuit .sheet-body .expertise-valeurs input[data-dtype="String"] {
+  margin-left: 5px;
+}
+
+.minuit .inline-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.minuit .resource-label {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.minuit .resource select {
+  width: calc(100% - 2px);
+}
+
+.minuit .resource input, .minuit .ability input {
+  font-size: 16px;
+}
+
+.minuit .tabs {
+  height: 40px;
+  border-top: 1px solid #AAA;
+  border-bottom: 1px solid #AAA;
+}
+
+.minuit .tabs .item {
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.minuit .tabs .item.active {
+  color: #e69d16;
+  text-shadow: none;
+}
+
+.minuit .items-list {
+  list-style: none;
+  margin: 7px 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.minuit .items-list .item-header {
+  font-weight: bold;
+}
+
+.minuit .items-list .item {
+  height: 30px;
+  line-height: 24px;
+  padding: 3px 0;
+  border-bottom: 1px solid #BBB;
+}
+
+.minuit .items-list .item .item-image {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  margin-right: 5px;
+}
+
+.minuit .items-list .item img {
+  display: block;
+}
+
+.minuit .items-list .item-name {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.minuit .items-list .item-header .item-name {
+  font-family: "Unica One", serif;
+}
+
+.minuit .items-list .item-controls {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 86px;
+  flex: 0 0 86px;
+  text-align: right;
+}
+
+.chat-message {
+  background: url("../images/background.png");
+  background-position: center;
+}
+
+.chat-message .dice-formula, .chat-message .dice-total {
+  border: none;
+  background-color: #fff;
+}
+
+.chat-message .dice-roll .dice-tooltip {
+  display: block !important;
+}

@@ -1,0 +1,110 @@
+.item-form {
+  font-family: $font-primary;
+}
+
+.sheet-header {
+  flex: 0 0 210px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+
+  .profile-img {
+    flex: 0 0 100px;
+    max-height:200px;
+    max-width: 100px;
+    height:auto;
+    margin-right: 10px;
+  }
+
+  .header-fields {
+    flex: 1;
+  }
+
+  h1.charname {
+    height: 50px;
+    padding: 0px;
+    margin: 5px 0;
+    border-bottom: 0;
+    input {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.sheet-tabs {
+  flex: 0;
+}
+
+.sheet-body,
+.sheet-body .tab,
+.sheet-body .tab .editor {
+  height: 100%;
+}
+
+.tox {
+  .tox-editor-container {
+    background: $c-white;
+  }
+
+  .tox-edit-area {
+    padding: 0 8px;
+  }
+}
+
+.aspect-titre {
+  flex: 1 1 100px;
+  letter-spacing: 0.1em;
+}
+
+.sheet-body{
+  ul{
+    list-style: none;
+    padding: 0px;
+  }
+  input[type="text"], textarea{
+    font-family: $font-secondary;
+    font-size: 14px;
+  }
+  label{
+    letter-spacing: 0.1em;
+    font-size:15px;
+    margin-top: 6px;
+    display: inline-block;
+  }
+
+  .expertise-name{
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  input[data-dtype="Number"]{
+    flex:0 0 20px;
+    text-align: center;
+  }
+  input[data-dtype="String"]{
+    flex:1;
+  }
+  .expertise-valeurs{
+    display:flex;
+    span{
+      border: none;
+      border-bottom: 1px solid $c-black;
+      border-radius:0px;
+      background-color:$c-background-secondary;
+      line-height: 24px;
+    }
+    input[data-dtype="String"]{
+      margin-left:5px;
+    }
+  }
+}
+
+.inline-flex{
+  display:flex;
+}

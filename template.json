@@ -1,0 +1,102 @@
+{
+  "Actor": {
+    "types": ["character","221b-baker-street"],
+    "templates": {
+      "base": {
+        "vie": {
+          "value": 6,
+          "min": 0,
+          "max": 6
+        },
+        "adrenaline": {
+          "value": 6,
+          "min": 0,
+          "max": 6
+        },
+        "ether": {
+          "value" : 3
+        }
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "concept" : "",
+      "description": "",
+      "lieuVie" : "",
+      "motivation" : "",
+      "quete" : {
+        "desc" : "",
+        "case1":false,
+        "case2":false
+      },
+      "evolution" : {
+        "desc": "",
+        "value": 0
+      },
+      "aspects":{
+        "agilite":{
+          "value":2
+        },
+        "perception":{
+          "value":2
+        },
+        "puissance":{
+          "value":2
+        },
+        "reflexion":{
+          "value":2
+        }
+      },
+      "expertises":{
+        "sociales":{
+          "recharge":"",
+          "value":0,
+          "min":0,
+          "max":0
+        },
+        "academiques":{
+          "recharge":"",
+          "value":0,
+          "min":0,
+          "max":0
+        },
+        "pratiques":{
+          "recharge":"",
+          "value":0,
+          "min":0,
+          "max":0
+        },
+        "combat":{
+          "recharge":"",
+          "value":0,
+          "min":0,
+          "max":0
+        }
+      },
+      "relations":{
+        "allie":"",
+        "nemesis":""
+      }
+    }
+  },
+  "Item": {
+    "types": ["arme","particularite","possession"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "arme": {
+      "templates": ["base"],
+      "degats": 0
+    },
+    "possession": {
+      "templates":["base"]
+    },
+    "particularite":{
+      "templates": ["base"],
+      "type": "",
+      "value":0
+    }
+  }
+}

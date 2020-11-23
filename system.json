@@ -1,0 +1,33 @@
+{
+  "name": "minuit",
+  "title": "Contes de Minuit",
+  "description": "Foundry VTT game system for the french RPG 'Contes de Minuit'",
+  "version": "1.0.0",
+  "minimumCoreVersion": "0.7.7",
+  "compatibleCoreVersion": "0.7.7",
+  "templateVersion": 2,
+  "author": "JDW",
+  "esmodules": ["module/minuit.js"],
+  "styles": ["css/minuit.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "vie",
+  "secondaryTokenAttribute": "adrenaline",
+  "url": "https://github.com/JiDW/foundryvtt-minuit",
+  "manifest": "https://github.com/JiDW/foundryvtt-minuit",
+  "download": "https://github.com/JiDW/foundryvtt-minuit"
+}

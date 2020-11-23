@@ -1,0 +1,8 @@
+{
+    "MINUIT.Aspects.agilite" : "Agilité",
+    "MINUIT.Aspects.perception" : "Perception",
+    "MINUIT.Aspects.puissance" : "Puissance",
+    "MINUIT.Aspects.reflexion" : "Réflexion",
+    "MINUIT.ParticulariteTypes.Faiblesse" : "Faiblesse",
+    "MINUIT.ParticulariteTypes.Force" : "Force"
+}
