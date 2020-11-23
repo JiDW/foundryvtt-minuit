@@ -27,7 +27,22 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "vie",
   "secondaryTokenAttribute": "adrenaline",
+  "media":[
+		{
+			"type":"cover",
+			"link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/screenshot1.jpg"
+		},
+		{
+			"type":"screenshot",
+			"link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/screenshot1.jpg"
+		},
+		{
+			"type":"screenshot",
+			"link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/screenshot2.jpg"
+		}
+	],
   "url": "https://github.com/JiDW/foundryvtt-minuit",
   "manifest": "https://github.com/JiDW/foundryvtt-minuit/releases/download/latest/system.json",
-  "download": "https://github.com/JiDW/foundryvtt-minuit/releases/download/1.0.0/system.zip"
+  "download": "https://github.com/JiDW/foundryvtt-minuit/releases/download/1.0.0/system.zip",
+  "bugs": "https://github.com/JiDW/foundryvtt-minuit/issues"
 }
