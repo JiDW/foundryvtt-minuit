@@ -13,16 +13,14 @@ export class MinuitActor extends Actor {
     const actorData = this.data;
     const data = actorData.data;
     const flags = actorData.flags;
+    const items = actorData.items;
+    
+    data.possessions = items.filter(item => item.type === "possession").sort((a, b) => a.name.localeCompare(b.name));
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     if (actorData.type === 'character') this._prepareCharacterData(actorData);
-
-    const items = actorData.items;
-    data.armes = items.filter(item => item.type === "arme");
-    data.forces = items.filter(item => item.type === "particularite" && item.data.type==="force");
-    data.faiblesses = items.filter(item => item.type === "particularite" && item.data.type==="faiblesse");
-    data.possessions = items.filter(item => item.type === "possession");
+    if (actorData.type === '221b-baker-street') this._prepareCabinetData(actorData);
   }
 
   /**
@@ -30,10 +28,34 @@ export class MinuitActor extends Actor {
    */
   _prepareCharacterData(actorData) {
     const data = actorData.data;
+    const items = actorData.items;
+    data.armes = items.filter(item => item.type === "arme").sort((a, b) => a.name.localeCompare(b.name));
+    data.forces = items.filter(item => item.type === "particularite" && item.data.type==="force").sort((a, b) => a.name.localeCompare(b.name));
+    data.faiblesses = items.filter(item => item.type === "particularite" && item.data.type==="faiblesse").sort((a, b) => a.name.localeCompare(b.name));
     for (let [key, aspect] of Object.entries(data.aspects)) {
-      // Calculate the modifier using d20 rules.
       aspect.nom = game.i18n.localize(`MINUIT.Aspects.${key}`);
     }
+  }
+
+  /**
+   * Prepare Cabinet type specific data
+   */
+  _prepareCabinetData(actorData) {
+    const data = actorData.data;
+    const items = actorData.items;
+    data.historiques = items.filter(item => item.type === "historique").sort((a, b) => a.name.localeCompare(b.name));
+    data.contacts = items.filter(item => item.type === "contact").sort((a, b) => a.data.categorie.localeCompare(b.data.categorie) || a.name.localeCompare(b.name));
+
+    for (let [key, contact] of Object.entries(data.contacts)) {
+      contact.categorieDesc = game.i18n.localize(`MINUIT.CategorieInfluence.${contact.data.categorie}`);
+    }
+  }
+
+  static async create(data, options)
+  {
+    if (data.type=="221b-baker-street")
+      data.img = "systems/minuit/images/221b.webp";
+    super.create(data, options);
   }
 
 }

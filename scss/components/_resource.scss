@@ -11,3 +11,10 @@
 .resource input, .ability input{
   font-size:16px;
 }
+
+.resource-content {
+  input[type="number"] {
+    font-size: 50px;
+    height: auto;
+  }
+}

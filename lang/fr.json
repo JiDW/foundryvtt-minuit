@@ -4,5 +4,10 @@
     "MINUIT.Aspects.puissance" : "Puissance",
     "MINUIT.Aspects.reflexion" : "Réflexion",
     "MINUIT.ParticulariteTypes.Faiblesse" : "Faiblesse",
-    "MINUIT.ParticulariteTypes.Force" : "Force"
+    "MINUIT.ParticulariteTypes.Force" : "Force",
+    "MINUIT.CategorieInfluence.informelle" : "Informelle",
+    "MINUIT.CategorieInfluence.institutionnelle" : "Institutionnelle",
+    "MINUIT.CategorieInfluence.intellectuelle" : "Intellectuelle",
+    "MINUIT.CategorieInfluence.interlope" : "Interlope",
+    "MINUIT.CategorieInfluence.paranaturelle" : "Paranaturelle"
 }

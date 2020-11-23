@@ -20,7 +20,7 @@ export class MinuitItem extends Item {
   static async create(data, options)
   {
     if (!data.img)
-      data.img = "systems/minuit/icons/blank.png";
+      data.img = "systems/minuit/images/blank.png";
     super.create(data, options);
   }
 }

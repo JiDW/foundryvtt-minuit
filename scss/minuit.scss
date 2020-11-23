@@ -18,7 +18,7 @@
 }
 
 .chat-message {
-  background: url('../images/background.png');
+  background: url('../images/background.webp');
   background-position: center;
   .dice-formula, .dice-total{
     border:none;
@@ -27,4 +27,27 @@
   .dice-roll .dice-tooltip {
     display: block !important;
   }
+}
+
+.sheet-header{
+  .patrimoine{
+    flex:0 0 102px;
+    .patrimoine-input{
+      font-size: 32px;
+      height: 50px;
+    }
+  }
+  .situation{
+    flex:1;
+  }
+}
+
+.sheet-header.directrice-header{
+  flex:1;
+}
+
+button.tension {
+  flex: 0 0 60px;
+  height: 60px;
+  font-size: 30px;
 }

@@ -6,7 +6,8 @@
 }
 
 .window-app .window-content {
-  background: #ececee;
+  background: url("../images/background.webp");
+  background-size: cover;
 }
 
 .window-app .window-content input, .window-app .window-content textarea {
@@ -17,16 +18,16 @@
   background-color: #e5e5e7;
 }
 
-.window-app.sheet {
+.window-app.sheet input[data-dtype="Number"] {
+  background-color: #fff;
+}
+
+.window-app.sheet.minuit {
   font-family: "Unica One", serif;
 }
 
-.window-app.sheet .window-content {
-  background: url("../images/background.png");
-}
-
-.window-app.sheet input[data-dtype="Number"] {
-  background-color: #fff;
+.window-app.sheet.minuit p {
+  font-family: "Roboto", sans-serif;
 }
 
 .rollable:hover, .rollable:focus {
@@ -137,6 +138,12 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* Styles limited to minuit sheets */
@@ -295,6 +302,11 @@
   font-size: 16px;
 }
 
+.minuit .resource-content input[type="number"] {
+  font-size: 50px;
+  height: auto;
+}
+
 .minuit .tabs {
   height: 40px;
   border-top: 1px solid #AAA;
@@ -358,8 +370,14 @@
   text-align: right;
 }
 
+.minuit .items-list .item-categorie {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 110px;
+  flex: 0 0 110px;
+}
+
 .chat-message {
-  background: url("../images/background.png");
+  background: url("../images/background.webp");
   background-position: center;
 }
 
@@ -370,4 +388,35 @@
 
 .chat-message .dice-roll .dice-tooltip {
   display: block !important;
+}
+
+.sheet-header .patrimoine {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 102px;
+  flex: 0 0 102px;
+}
+
+.sheet-header .patrimoine .patrimoine-input {
+  font-size: 32px;
+  height: 50px;
+}
+
+.sheet-header .situation {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.sheet-header.directrice-header {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+button.tension {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  height: 60px;
+  font-size: 30px;
 }

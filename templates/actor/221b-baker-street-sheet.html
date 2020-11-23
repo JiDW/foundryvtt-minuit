@@ -1,0 +1,142 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+            <div class="resources flex">
+                <div class="resource flex-group-center situation">
+                    <label class="resource-label">Situation</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <textarea name="data.situation" rows="2" title="Situation" data-dtype="String">{{data.situation}}</textarea>
+                    </div>
+                </div>
+                <div class="resource flex-group-center patrimoine">
+                    <label class="resource-label">Patrimoine</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <input type="text" class="patrimoine-input" name="data.patrimoine" value="{{data.patrimoine}}" data-dtype="Number"/>
+                    </div>
+                </div>
+            </div>
+            <div class="resource flex-group-center">
+                <label for="data.adrenaline.value" class="resource-label">Concièrge</label>
+                <div class="resource-content flexrow flex-center flex-between">
+                    <textarea name="data.concierge" rows="2" title="Concierge" data-dtype="String">{{data.concierge}}</textarea>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">Etat des lieux</a>
+        <a class="item" data-tab="vitrine">Vitrine</a>
+        <a class="item" data-tab="historique">Historique</a>
+        <a class="item" data-tab="contacts">Contacts</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Biography Tab --}}
+        <div class="tab description" data-group="primary" data-tab="description">
+            <div class="row-flex">
+                <h2>Etat des lieux</h2>
+                <ul>
+                    <li>
+                        <label>Sécurité</label>
+                        <textarea name="data.etatDesLieux.securite" rows="5" title="Sécurité" data-dtype="String">{{data.etatDesLieux.securite}}</textarea>
+                    </li>
+                    <li>
+                        <label>Vestibule</label>
+                        <textarea name="data.etatDesLieux.vestibule" rows="5" title="Vestibule" data-dtype="String">{{data.etatDesLieux.vestibule}}</textarea>
+                    </li>
+                    <li>
+                        <label>Salon</label>
+                        <textarea name="data.etatDesLieux.salon" rows="5" title="Salon" data-dtype="String">{{data.etatDesLieux.salon}}</textarea>
+                    </li>
+                    <li>
+                        <label>Bureau</label>
+                        <textarea name="data.etatDesLieux.bureau" rows="5" title="Bureau" data-dtype="String">{{data.etatDesLieux.bureau}}</textarea>
+                    </li>
+                    <li>
+                        <label>Commodités</label>
+                        <textarea name="data.etatDesLieux.commodites" rows="5" title="Commodités" data-dtype="String">{{data.etatDesLieux.commodites}}</textarea>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {{!-- Vitrine Tab --}}
+        <div class="tab vitrine" data-group="primary" data-tab="vitrine">
+            <ol class="items-list">
+                <li class="item flexrow item-header">
+                    <div class="item-image"></div>
+                    <div class="item-name">Nom</div>
+                    <div class="item-controls">
+                        <a class="item-control item-create" title="Ajouter un objet" data-type="possession"><i class="fas fa-plus"></i> Ajouter</a>
+                    </div>
+                </li>
+                {{#each actor.data.possessions as |possession id|}}
+                <li class="item flexrow" data-item-id="{{possession._id}}">
+                    <div class="item-image"><img src="{{possession.img}}" title="{{possession.name}}" width="24" height="24" /></div>
+                    <h4 class="item-name">{{possession.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+        {{!-- Historique Tab --}}
+        <div class="tab historique items" data-group="primary" data-tab="historique">
+            <ol class="items-list">
+                <li class="item flexrow item-header">
+                    <div class="item-image"></div>
+                    <div class="item-name">Faits</div>
+                    <div class="item-controls">
+                        <a class="item-control item-create" title="Ajouter un historique" data-type="historique"><i class="fas fa-plus"></i> Ajouter</a>
+                    </div>
+                </li>
+                {{#each actor.data.historiques as |historique id|}}
+                <li class="item flexrow" data-item-id="{{historique._id}}">
+                    <div class="item-image">
+                        <input type="checkbox" data-dtype="Boolean" {{checked historique.data.coche}} class="coche" />
+                    </div>
+                    <h4 class="item-name">{{historique.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+        {{!-- Contact Tab --}}
+        <div class="tab contacts" data-group="primary" data-tab="contacts">
+            <ol class="items-list">
+                <li class="item flexrow item-header">
+                    <div class="item-image"></div>
+                    <div class="item-name">Categorie</div>
+                    <div class="item-name">Nom</div>
+                    <div class="item-controls">
+                        <a class="item-control item-create" title="Ajouter un contact" data-type="contact"><i class="fas fa-plus"></i> Ajouter</a>
+                    </div>
+                </li>
+                {{#each actor.data.contacts as |contact id|}}
+                <li class="item flexrow" data-item-id="{{contact._id}}">
+                    <div class="item-image">
+                        <input type="checkbox" data-dtype="Boolean" {{checked contact.data.coche}} class="coche" />
+                    </div>
+                    <h4 class="item-name item-categorie">{{contact.categorieDesc}}</h4>
+                    <h4 class="item-name">{{contact.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+
+    </section>
+</form>

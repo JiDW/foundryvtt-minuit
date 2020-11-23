@@ -31,6 +31,15 @@ export class MinuitItemSheet extends ItemSheet {
         "faiblesse": game.i18n.localize("MINUIT.ParticulariteTypes.Faiblesse"),
       }
     }
+    if(this.item.data.type == "contact"){
+      data.categorieInfluence = {
+        "informelle": game.i18n.localize("MINUIT.CategorieInfluence.informelle"),
+        "institutionnelle": game.i18n.localize("MINUIT.CategorieInfluence.institutionnelle"),
+        "intellectuelle": game.i18n.localize("MINUIT.CategorieInfluence.intellectuelle"),
+        "interlope": game.i18n.localize("MINUIT.CategorieInfluence.interlope"),
+        "paranaturelle": game.i18n.localize("MINUIT.CategorieInfluence.paranaturelle"),
+      }
+    }
     return data;
   }
 

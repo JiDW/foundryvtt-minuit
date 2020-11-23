@@ -15,6 +15,12 @@ export class MinuitActorSheet extends ActorSheet {
     });
   }
 
+  /** @override */
+  get template() {
+    const path = "systems/minuit/templates/actor";
+    return `${path}/${this.actor.data.type}-sheet.html`;
+  }
+
   /* -------------------------------------------- */
 
   /** @override */
@@ -49,6 +55,31 @@ export class MinuitActorSheet extends ActorSheet {
       li.slideUp(200, () => this.render(false));
     });
 
+    // Tension plus
+    html.find('.tension-plus').click(ev => {
+      let tension = this.actor.data.data.tension;
+      tension++;
+      this.actor.update({["data.tension"]: tension});
+    });
+
+    // Tension minus
+    html.find('.tension-minus').click(ev => {
+      let tension = this.actor.data.data.tension;
+      tension--;
+      this.actor.update({["data.tension"]: tension});
+    });
+
+    html.find('.coche').click(ev => {
+      const li = $(ev.currentTarget).parents(".item");
+      let value = $(ev.currentTarget).is(":checked");
+      
+      let item = duplicate(this.actor.getEmbeddedEntity("OwnedItem", li.data("itemId")));
+
+      item.data.coche = value;
+
+      this.actor.updateEmbeddedEntity("OwnedItem", item);
+    });
+
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
   }
@@ -79,7 +110,7 @@ export class MinuitActorSheet extends ActorSheet {
     delete itemData.data["type"];
 
     // Finally, create the item!
-    return this.actor.createOwnedItem(itemData);
+    return this.actor.createOwnedItem(itemData).then(item => this.actor.getOwnedItem(item._id).sheet.render(true));
   }
 
   /**

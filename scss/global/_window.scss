@@ -1,7 +1,8 @@
 .window-app {
   font-family: $font-secondary;
   .window-content {
-    background: $c-background-primary;
+    background: url('../images/background.webp');
+    background-size: cover;
     input, textarea{
       color: $c-black;
       border: none;
@@ -13,12 +14,15 @@
 }
 
 .window-app.sheet{
-  font-family: $font-primary;
-  .window-content {
-    background: url('../images/background.png');
-  }
   input[data-dtype="Number"]{
     background-color:$c-white;
+  }
+}
+
+.window-app.sheet.minuit{
+  font-family: $font-primary;
+  p{
+    font-family: $font-secondary;
   }
 }
 

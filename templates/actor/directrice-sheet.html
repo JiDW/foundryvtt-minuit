@@ -1,0 +1,21 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header directrice-header">
+        <div class="header-fields">
+            <div class="resources flex">
+                <div class="resource flex-group-center situation">
+                    <label class="resource-label">Points de tension</label>
+                    <div class="resource-content flexrow flex-center flex-between">
+                        <button class="tension tension-minus"><i class="fas fa-minus-square"></i></button>
+                        <input type="number" name="data.tension" value="{{data.tension}}" data-dtype="Number"/>
+                        <button class="tension tension-plus"><i class="fas fa-plus-square"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="sheet-body">
+        <h2>Notes</h2>
+        <textarea name="data.notes" rows="40" title="notes" data-dtype="String">{{data.notes}}</textarea>
+    </section>
+</form>

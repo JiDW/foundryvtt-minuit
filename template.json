@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character","221b-baker-street"],
+    "types": ["character","221b-baker-street","directrice"],
     "templates": {
       "base": {
         "vie": {
@@ -16,6 +16,18 @@
         "ether": {
           "value" : 3
         }
+      }
+    },
+    "221b-baker-street":{
+      "situation":"",
+      "concierge":"",
+      "patrimoine":0,
+      "etatDesLieux":{
+        "securite":"",
+        "vestibule":"",
+        "salon":"",
+        "bureau":"",
+        "commodites":""
       }
     },
     "character": {
@@ -77,10 +89,14 @@
         "allie":"",
         "nemesis":""
       }
+    },
+    "directrice":{
+      "tension":6,
+      "notes":""
     }
   },
   "Item": {
-    "types": ["arme","particularite","possession"],
+    "types": ["arme","particularite","possession","historique","contact"],
     "templates": {
       "base": {
         "description": ""
@@ -97,6 +113,15 @@
       "templates": ["base"],
       "type": "",
       "value":0
+    },
+    "historique":{
+      "templates": ["base"],
+      "coche":false
+    },
+    "contact":{
+      "templates": ["base"],
+      "categorie":"",
+      "coche":false
     }
   }
 }
