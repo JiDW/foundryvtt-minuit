@@ -7,6 +7,13 @@
   "compatibleCoreVersion": "0.7.7",
   "templateVersion": 2,
   "author": "JDW",
+  "authors": [
+		{
+			"name": "JDW",
+			"discord": "JDW#6422",
+			"reddit":"u/jidewe"
+		}
+	],
   "esmodules": ["module/minuit.js"],
   "styles": ["css/minuit.css"],
   "scripts": [],
