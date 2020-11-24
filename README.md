@@ -10,3 +10,8 @@ Foundry VTT game system for the french RPG "Contes de Minuit"
 ## About - Contes de Minuit
 *Contes de Minuit* is a role-playing game created by Anthony "Yno" Combrexelle.  
 Find more about the game here: [Contes de Minuit (French)](http://www.misterfrankenstein.com/wordpress/?p=5156)
+
+## Credits
+> :warning: While the author has given me his agreement to publish it, this is an **unofficial** fan-made system for Foundry VTT. 
+
+Logo by Anthony "Yno" Combrexelle, with his kind and explicit agreement.
