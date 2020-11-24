@@ -16,8 +16,6 @@
 	],
   "esmodules": ["module/minuit.js"],
   "styles": ["css/minuit.css"],
-  "scripts": [],
-  "packs": [],
   "languages": [
     {
       "lang": "en",
@@ -37,7 +35,7 @@
   "media":[
 		{
 			"type":"cover",
-			"link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/screenshot1.jpg"
+			"link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/cover.jpg"
 		},
 		{
 			"type":"screenshot",
@@ -51,5 +49,6 @@
   "url": "https://github.com/JiDW/foundryvtt-minuit",
   "manifest": "https://github.com/JiDW/foundryvtt-minuit/releases/download/latest/system.json",
   "download": "https://github.com/JiDW/foundryvtt-minuit/releases/download/1.0.0/system.zip",
-  "bugs": "https://github.com/JiDW/foundryvtt-minuit/issues"
+  "bugs": "https://github.com/JiDW/foundryvtt-minuit/issues",
+  "readme": "https://github.com/JiDW/foundryvtt-minuit#readme"
 }
