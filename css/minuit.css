@@ -357,6 +357,7 @@
 .minuit .items-list .item-name {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 
 .minuit .items-list .item-header .item-name {

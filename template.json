@@ -104,7 +104,7 @@
     },
     "arme": {
       "templates": ["base"],
-      "degats": 0
+      "degats": ""
     },
     "possession": {
       "templates":["base"]

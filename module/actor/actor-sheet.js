@@ -42,7 +42,7 @@ export class MinuitActorSheet extends ActorSheet {
     html.find('.item-create').click(this._onItemCreate.bind(this));
 
     // Update Inventory Item
-    html.find('.item-edit').click(ev => {
+    html.find('.item-edit, .item-name').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
       const item = this.actor.getOwnedItem(li.data("itemId"));
       item.sheet.render(true);
