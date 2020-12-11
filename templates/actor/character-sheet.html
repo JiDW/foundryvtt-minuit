@@ -41,7 +41,7 @@
           <div class="abilities grid grid-4col">
             {{#each data.aspects as |aspect key|}}
               <div class="ability flexrow flex-group-center">
-                <input type="text" name="data.aspect.{{key}}.value" value="{{aspect.value}}" data-dtype="Number"/>
+                <input type="text" name="data.aspects.{{key}}.value" value="{{aspect.value}}" data-dtype="Number"/>
                 <span class="ability-mod rollable" data-roll="{{aspect.value}}d6cs>3" data-label="{{key}}"><i class="fas fa-dice"></i></span>
                 <div class="aspect-titre">{{aspect.nom}}</div>
               </div>

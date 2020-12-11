@@ -2,7 +2,7 @@
   list-style: none;
   margin: 7px 0;
   padding: 0;
-  overflow-y: auto;
+  overflow-y: visible;
 
   .item-header {
     font-weight: bold;
@@ -28,6 +28,12 @@
     margin: 0;
     font-family: $font-secondary;
     cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 483px;
+    overflow: hidden;
+    display: block;
+    height: 30px;
   }
 
   .item-header .item-name{
@@ -35,7 +41,7 @@
   }
 
   .item-controls {
-    flex: 0 0 86px;
+    flex: 0 0 60px;
     text-align: right;
   }
 
