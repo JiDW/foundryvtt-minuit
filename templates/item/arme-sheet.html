@@ -6,7 +6,7 @@
             <div class="grid grid-1col">
               <div class="resource">
                 <label class="resource-label">Dégats</label>
-                  <input type="text" name="data.degats" value="{{data.degats}}" data-dtype="String"/>
+                  <input type="text" name="data.degats" value="{{data.data.degats}}" data-dtype="String"/>
               </div>
             </div>
         </div>
@@ -16,7 +16,7 @@
     <section class="sheet-body">
         <div class="tab active" data-group="primary" data-tab="description">
             <h2>Description</h2>
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>

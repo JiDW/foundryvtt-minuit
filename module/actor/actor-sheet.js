@@ -24,8 +24,8 @@ export class MinuitActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
-    const data = super.getData();
+  getData(options) {
+    const data = super.getData(options);
     data.dtypes = ["String", "Number", "Boolean"];
     
     return data;
@@ -44,14 +44,14 @@ export class MinuitActorSheet extends ActorSheet {
     // Update Inventory Item
     html.find('.item-edit, .item-name').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
+      const item = this.actor.getEmbeddedDocument("Item",li.data("itemId"));
       item.sheet.render(true);
     });
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteOwnedItem(li.data("itemId"));
+      this.actor.deleteEmbeddedDocuments("Item",[li.data("itemId")]);
       li.slideUp(200, () => this.render(false));
     });
 
@@ -73,11 +73,11 @@ export class MinuitActorSheet extends ActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       let value = $(ev.currentTarget).is(":checked");
       
-      let item = duplicate(this.actor.getEmbeddedEntity("OwnedItem", li.data("itemId")));
+      let item = duplicate(this.actor.getEmbeddedDocument("Item", li.data("itemId")));
 
       item.data.coche = value;
 
-      this.actor.updateEmbeddedEntity("OwnedItem", item);
+      this.actor.updateEmbeddedDocuments("Item", [item]);
     });
 
     // Rollable abilities.
@@ -110,7 +110,7 @@ export class MinuitActorSheet extends ActorSheet {
     delete itemData.data["type"];
 
     // Finally, create the item!
-    return this.actor.createOwnedItem(itemData).then(item => this.actor.getOwnedItem(item._id).sheet.render(true));
+    return this.actor.createEmbeddedDocuments("Item",[itemData]).then(item => this.actor.getEmbeddedDocument("Item",item[0].id).sheet.render(true));
   }
 
   /**

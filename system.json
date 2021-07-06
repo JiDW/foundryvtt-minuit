@@ -2,9 +2,9 @@
   "name": "minuit",
   "title": "Contes de Minuit",
   "description": "Foundry VTT game system for the french RPG 'Contes de Minuit'",
-  "version": "1.0.2",
-  "minimumCoreVersion": "0.7.7",
-  "compatibleCoreVersion": "0.7.8",
+  "version": "1.1.0",
+  "minimumCoreVersion": "0.8.8",
+  "compatibleCoreVersion": "0.8.8",
   "templateVersion": 2,
   "author": "JDW",
   "authors": [
@@ -48,7 +48,7 @@
 	],
   "url": "https://github.com/JiDW/foundryvtt-minuit",
   "manifest": "https://github.com/JiDW/foundryvtt-minuit/releases/download/latest/system.json",
-  "download": "https://github.com/JiDW/foundryvtt-minuit/releases/download/v1.0.2/system.zip",
+  "download": "https://github.com/JiDW/foundryvtt-minuit/releases/download/v1.1.0/system.zip",
   "bugs": "https://github.com/JiDW/foundryvtt-minuit/issues",
   "readme": "https://github.com/JiDW/foundryvtt-minuit#readme"
 }

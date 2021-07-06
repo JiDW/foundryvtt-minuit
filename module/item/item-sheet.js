@@ -23,8 +23,8 @@ export class MinuitItemSheet extends ItemSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
-    const data = super.getData();
+  getData(options) {
+    const data = super.getData(options);
     if(this.item.data.type == "particularite"){
       data.particulariteTypes = {
         "force": game.i18n.localize("MINUIT.ParticulariteTypes.Force"),

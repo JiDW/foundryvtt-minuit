@@ -7,20 +7,20 @@
                 <div class="resource flex-group-center situation">
                     <label class="resource-label">Situation</label>
                     <div class="resource-content flexrow flex-center flex-between">
-                        <textarea name="data.situation" rows="2" title="Situation" data-dtype="String">{{data.situation}}</textarea>
+                        <textarea name="data.situation" rows="2" title="Situation" data-dtype="String">{{data.data.situation}}</textarea>
                     </div>
                 </div>
                 <div class="resource flex-group-center patrimoine">
                     <label class="resource-label">Patrimoine</label>
                     <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" class="patrimoine-input" name="data.patrimoine" value="{{data.patrimoine}}" data-dtype="Number"/>
+                        <input type="text" class="patrimoine-input" name="data.patrimoine" value="{{data.data.patrimoine}}" data-dtype="Number"/>
                     </div>
                 </div>
             </div>
             <div class="resource flex-group-center">
                 <label for="data.adrenaline.value" class="resource-label">Concièrge</label>
                 <div class="resource-content flexrow flex-center flex-between">
-                    <textarea name="data.concierge" rows="2" title="Concierge" data-dtype="String">{{data.concierge}}</textarea>
+                    <textarea name="data.concierge" rows="2" title="Concierge" data-dtype="String">{{data.data.concierge}}</textarea>
                 </div>
             </div>
         </div>
@@ -44,23 +44,23 @@
                 <ul>
                     <li>
                         <label>Sécurité</label>
-                        <textarea name="data.etatDesLieux.securite" rows="5" title="Sécurité" data-dtype="String">{{data.etatDesLieux.securite}}</textarea>
+                        <textarea name="data.etatDesLieux.securite" rows="5" title="Sécurité" data-dtype="String">{{data.data.etatDesLieux.securite}}</textarea>
                     </li>
                     <li>
                         <label>Vestibule</label>
-                        <textarea name="data.etatDesLieux.vestibule" rows="5" title="Vestibule" data-dtype="String">{{data.etatDesLieux.vestibule}}</textarea>
+                        <textarea name="data.etatDesLieux.vestibule" rows="5" title="Vestibule" data-dtype="String">{{data.data.etatDesLieux.vestibule}}</textarea>
                     </li>
                     <li>
                         <label>Salon</label>
-                        <textarea name="data.etatDesLieux.salon" rows="5" title="Salon" data-dtype="String">{{data.etatDesLieux.salon}}</textarea>
+                        <textarea name="data.etatDesLieux.salon" rows="5" title="Salon" data-dtype="String">{{data.data.etatDesLieux.salon}}</textarea>
                     </li>
                     <li>
                         <label>Bureau</label>
-                        <textarea name="data.etatDesLieux.bureau" rows="5" title="Bureau" data-dtype="String">{{data.etatDesLieux.bureau}}</textarea>
+                        <textarea name="data.etatDesLieux.bureau" rows="5" title="Bureau" data-dtype="String">{{data.data.etatDesLieux.bureau}}</textarea>
                     </li>
                     <li>
                         <label>Commodités</label>
-                        <textarea name="data.etatDesLieux.commodites" rows="5" title="Commodités" data-dtype="String">{{data.etatDesLieux.commodites}}</textarea>
+                        <textarea name="data.etatDesLieux.commodites" rows="5" title="Commodités" data-dtype="String">{{data.data.etatDesLieux.commodites}}</textarea>
                     </li>
                 </ul>
             </div>
@@ -75,8 +75,8 @@
                         <a class="item-control item-create" title="Ajouter un objet" data-type="possession"><i class="fas fa-plus"></i> Ajouter</a>
                     </div>
                 </li>
-                {{#each actor.data.possessions as |possession id|}}
-                <li class="item flexrow" data-item-id="{{possession._id}}">
+                {{#each actor.data.data.possessions as |possession id|}}
+                <li class="item flexrow" data-item-id="{{possession.id}}">
                     <div class="item-image"><img src="{{possession.img}}" title="{{possession.name}}" width="24" height="24" /></div>
                     <h4 class="item-name">{{possession.name}}</h4>
                     <div class="item-controls">
@@ -97,10 +97,10 @@
                         <a class="item-control item-create" title="Ajouter un historique" data-type="historique"><i class="fas fa-plus"></i> Ajouter</a>
                     </div>
                 </li>
-                {{#each actor.data.historiques as |historique id|}}
-                <li class="item flexrow" data-item-id="{{historique._id}}">
+                {{#each actor.data.data.historiques as |historique id|}}
+                <li class="item flexrow" data-item-id="{{historique.id}}">
                     <div class="item-image">
-                        <input type="checkbox" data-dtype="Boolean" {{checked historique.data.coche}} class="coche" />
+                        <input type="checkbox" data-dtype="Boolean" {{checked historique.data.data.coche}} class="coche" />
                     </div>
                     <h4 class="item-name">{{historique.name}}</h4>
                     <div class="item-controls">
@@ -122,10 +122,10 @@
                         <a class="item-control item-create" title="Ajouter un contact" data-type="contact"><i class="fas fa-plus"></i> Ajouter</a>
                     </div>
                 </li>
-                {{#each actor.data.contacts as |contact id|}}
-                <li class="item flexrow" data-item-id="{{contact._id}}">
+                {{#each actor.data.data.contacts as |contact id|}}
+                <li class="item flexrow" data-item-id="{{contact.id}}">
                     <div class="item-image">
-                        <input type="checkbox" data-dtype="Boolean" {{checked contact.data.coche}} class="coche" />
+                        <input type="checkbox" data-dtype="Boolean" {{checked contact.data.data.coche}} class="coche" />
                     </div>
                     <h4 class="item-name item-categorie">{{contact.categorieDesc}}</h4>
                     <h4 class="item-name">{{contact.name}}</h4>

@@ -7,7 +7,7 @@
                 <div class="resource">
                     <label class="resource-label">Catégorie</label>
                     <select name="data.categorie" data-dtype="String">
-                    {{#select data.categorie}}
+                    {{#select data.data.categorie}}
                         {{#each categorieInfluence as |type t|}}
                         <option value="{{t}}">{{type}}</option>
                         {{/each}}
@@ -22,7 +22,7 @@
     <section class="sheet-body">
         <div class="tab active" data-group="primary" data-tab="description">
             <h2>Description</h2>
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>
