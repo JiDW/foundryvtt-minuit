@@ -118,7 +118,7 @@ export class MinuitActorSheet extends ActorSheet {
    * @param {Event} event   The originating click event
    * @private
    */
-  _onRoll(event) {
+  async _onRoll(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
@@ -126,11 +126,13 @@ export class MinuitActorSheet extends ActorSheet {
     if (dataset.roll) {
       let roll = new Roll(dataset.roll, this.actor.data.data);
       let label = dataset.label ? `Jet de ${dataset.label}` : '';
-      roll.roll().toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label
-      });
+
+      const messageData = {
+          flavor: label,
+          speaker: ChatMessage.getSpeaker({ actor: this.actor })
+      };
+
+      await roll.toMessage(messageData);
     }
   }
-
 }
