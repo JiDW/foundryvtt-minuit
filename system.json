@@ -2,18 +2,21 @@
   "name": "minuit",
   "title": "Contes de Minuit",
   "description": "Foundry VTT game system for the french RPG 'Contes de Minuit'",
-  "version": "1.1.0",
-  "minimumCoreVersion": "0.8.8",
-  "compatibleCoreVersion": "0.8.8",
+  "version": "1.2.0",
+  "minimumCoreVersion": "0.9.238",
+  "compatibleCoreVersion": "0.9.280",
   "templateVersion": 2,
   "author": "JDW",
   "authors": [
-		{
-			"name": "JDW",
-			"discord": "JDW#6422",
-			"reddit":"u/jidewe"
-		}
-	],
+    {
+      "name": "JDW",
+      "discord": "JDW#6422",
+      "reddit":"u/jidewe"
+    },
+    {
+      "name": "Tortillas"
+    }
+  ],
   "esmodules": ["module/minuit.js"],
   "styles": ["css/minuit.css"],
   "languages": [
@@ -33,22 +36,22 @@
   "primaryTokenAttribute": "vie",
   "secondaryTokenAttribute": "adrenaline",
   "media":[
-		{
-			"type":"cover",
-			"link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/cover.jpg"
-		},
-		{
-			"type":"screenshot",
-			"link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/screenshot1.jpg"
-		},
-		{
-			"type":"screenshot",
-			"link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/screenshot2.jpg"
-		}
-	],
-  "url": "https://github.com/JiDW/foundryvtt-minuit",
-  "manifest": "https://github.com/JiDW/foundryvtt-minuit/releases/download/latest/system.json",
-  "download": "https://github.com/JiDW/foundryvtt-minuit/releases/download/v1.1.0/system.zip",
-  "bugs": "https://github.com/JiDW/foundryvtt-minuit/issues",
-  "readme": "https://github.com/JiDW/foundryvtt-minuit#readme"
+    {
+      "type":"cover",
+      "link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/cover.jpg"
+    },
+    {
+      "type":"screenshot",
+      "link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/screenshot1.jpg"
+    },
+    {
+      "type":"screenshot",
+      "link":"https://raw.githubusercontent.com/JiDW/foundryvtt-minuit/main/screenshot2.jpg"
+    }
+  ],
+  "url": "https://github.com/tortillas5/foundryvtt-minuit-9",
+  "manifest": "https://github.com/tortillas5/foundryvtt-minuit-9/releases/download/latest/system.json",
+  "download": "https://github.com/tortillas5/foundryvtt-minuit-9/releases/download/v1.2.0/system.zip",
+  "bugs": "https://github.com/tortillas5/foundryvtt-minuit-9/issues",
+  "readme": "https://github.com/tortillas5/foundryvtt-minuit-9#readme"
 }
