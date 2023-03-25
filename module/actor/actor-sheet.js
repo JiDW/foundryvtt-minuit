@@ -57,14 +57,14 @@ export class MinuitActorSheet extends ActorSheet {
 
     // Tension plus
     html.find('.tension-plus').click(ev => {
-      let tension = this.actor.data.data.tension;
+      let tension = this.actor.system.tension;
       tension++;
       this.actor.update({["data.tension"]: tension});
     });
 
     // Tension minus
     html.find('.tension-minus').click(ev => {
-      let tension = this.actor.data.data.tension;
+      let tension = this.actor.system.tension;
       tension--;
       this.actor.update({["data.tension"]: tension});
     });
@@ -124,7 +124,7 @@ export class MinuitActorSheet extends ActorSheet {
     const dataset = element.dataset;
 
     if (dataset.roll) {
-      let roll = new Roll(dataset.roll, this.actor.data.data);
+      let roll = new Roll(dataset.roll, this.actor.system);
       let label = dataset.label ? `Jet de ${dataset.label}` : '';
 
       const messageData = {

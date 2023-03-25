@@ -30,8 +30,8 @@ export class MinuitActor extends Actor {
     const data = actorData.data;
     const items = actorData.items;
     data.armes = items.filter(item => item.type === "arme").sort((a, b) => a.name.localeCompare(b.name));
-    data.forces = items.filter(item => item.type === "particularite" && item.data.data.type==="force").sort((a, b) => a.name.localeCompare(b.name));
-    data.faiblesses = items.filter(item => item.type === "particularite" && item.data.data.type==="faiblesse").sort((a, b) => a.name.localeCompare(b.name));
+    data.forces = items.filter(item => item.type === "particularite" && item.system.type==="force").sort((a, b) => a.name.localeCompare(b.name));
+    data.faiblesses = items.filter(item => item.type === "particularite" && item.system.type==="faiblesse").sort((a, b) => a.name.localeCompare(b.name));
     for (let [key, aspect] of Object.entries(data.aspects)) {
       aspect.nom = game.i18n.localize(`MINUIT.Aspects.${key}`);
     }
@@ -44,10 +44,10 @@ export class MinuitActor extends Actor {
     const data = actorData.data;
     const items = actorData.items;
     data.historiques = items.filter(item => item.type === "historique").sort((a, b) => a.name.localeCompare(b.name));
-    data.contacts = items.filter(item => item.type === "contact").sort((a, b) => a.data.data.categorie.localeCompare(b.data.data.categorie) || a.name.localeCompare(b.name));
+    data.contacts = items.filter(item => item.type === "contact").sort((a, b) => a.system.categorie.localeCompare(b.system.categorie) || a.name.localeCompare(b.name));
 
     for (let [key, contact] of Object.entries(data.contacts)) {
-      contact.categorieDesc = game.i18n.localize(`MINUIT.CategorieInfluence.${contact.data.data.categorie}`);
+      contact.categorieDesc = game.i18n.localize(`MINUIT.CategorieInfluence.${contact.system.categorie}`);
     }
   }
 
