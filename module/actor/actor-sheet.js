@@ -44,14 +44,14 @@ export class MinuitActorSheet extends ActorSheet {
     // Update Inventory Item
     html.find('.item-edit, .item-name').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getEmbeddedDocument("Item",li.system("itemId"));
+      const item = this.actor.getEmbeddedDocument("Item",li.data("itemId"));
       item.sheet.render(true);
     });
 
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteEmbeddedDocuments("Item",[li.system("itemId")]);
+      this.actor.deleteEmbeddedDocuments("Item",[li.data("itemId")]);
       li.slideUp(200, () => this.render(false));
     });
 
@@ -73,7 +73,7 @@ export class MinuitActorSheet extends ActorSheet {
       const li = $(ev.currentTarget).parents(".item");
       let value = $(ev.currentTarget).is(":checked");
       
-      let item = duplicate(this.actor.getEmbeddedDocument("Item", li.system("itemId")));
+      let item = duplicate(this.actor.getEmbeddedDocument("Item", li.data("itemId")));
 
       item.system.coche = value;
 
