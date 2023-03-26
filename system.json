@@ -1,12 +1,14 @@
 {
-  "name": "minuit",
+
+  "id": "minuit",
   "title": "Contes de Minuit",
   "description": "Foundry VTT game system for the french RPG 'Contes de Minuit'",
   "version": "1.3.0",
-  "minimumCoreVersion": "10.291",
-  "compatibleCoreVersion": "10.291",
-  "templateVersion": 2,
-  "author": "JDW",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10.291",
+    "maximum": "10.291"
+  },
   "authors": [
     {
       "name": "JDW",
@@ -17,8 +19,12 @@
       "name": "Tortillas"
     }
   ],
-  "esmodules": ["module/minuit.js"],
-  "styles": ["css/minuit.css"],
+  "esmodules": [
+    "module/minuit.js"
+  ],
+  "styles": [
+    "css/minuit.css"
+  ],
   "languages": [
     {
       "lang": "en",
@@ -31,27 +37,12 @@
       "path": "lang/fr.json"
     }
   ],
+  "socket": false,
   "gridDistance": 5,
   "gridUnits": "m",
   "primaryTokenAttribute": "vie",
   "secondaryTokenAttribute": "adrenaline",
-  "media":[
-    {
-      "type":"cover",
-      "link":"https://raw.githubusercontent.com/tortillas5/foundryvtt-minuit/main/cover.jpg"
-    },
-    {
-      "type":"screenshot",
-      "link":"https://raw.githubusercontent.com/tortillas5/foundryvtt-minuit/main/screenshot1.jpg"
-    },
-    {
-      "type":"screenshot",
-      "link":"https://raw.githubusercontent.com/tortillas5/foundryvtt-minuit/main/screenshot2.jpg"
-    }
-  ],
   "url": "https://github.com/tortillas5/foundryvtt-minuit",
   "manifest": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.0/system.json",
-  "download": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.0/system.zip",
-  "bugs": "https://github.com/tortillas5/foundryvtt-minuit/issues",
-  "readme": "https://github.com/tortillas5/foundryvtt-minuit#readme"
+  "download": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.0/system.zip"
 }
