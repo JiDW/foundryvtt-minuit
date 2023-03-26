@@ -59,14 +59,14 @@ export class MinuitActorSheet extends ActorSheet {
     html.find('.tension-plus').click(ev => {
       let tension = this.actor.system.tension;
       tension++;
-      this.actor.updateSource({["tension"]: tension});
+      this.actor.update({["system.tension"]: tension});
     });
 
     // Tension minus
     html.find('.tension-minus').click(ev => {
-      let tension = this.actor.tension;
+      let tension = this.actor.system.tension;
       tension--;
-      this.actor.updateSource({["tension"]: tension});
+      this.actor.update({["system.tension"]: tension});
     });
 
     html.find('.coche').click(ev => {
