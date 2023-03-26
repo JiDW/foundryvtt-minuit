@@ -18,7 +18,7 @@ export class MinuitActorSheet extends ActorSheet {
   /** @override */
   get template() {
     const path = "systems/minuit/templates/actor";
-    return `${path}/${this.actor.data.type}-sheet.html`;
+    return `${path}/${this.actor.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
@@ -57,16 +57,16 @@ export class MinuitActorSheet extends ActorSheet {
 
     // Tension plus
     html.find('.tension-plus').click(ev => {
-      let tension = this.actor.data.data.tension;
+      let tension = this.actor.system.tension;
       tension++;
-      this.actor.update({["data.tension"]: tension});
+      this.actor.update({["system.tension"]: tension});
     });
 
     // Tension minus
     html.find('.tension-minus').click(ev => {
-      let tension = this.actor.data.data.tension;
+      let tension = this.actor.system.tension;
       tension--;
-      this.actor.update({["data.tension"]: tension});
+      this.actor.update({["system.tension"]: tension});
     });
 
     html.find('.coche').click(ev => {
@@ -75,7 +75,7 @@ export class MinuitActorSheet extends ActorSheet {
       
       let item = duplicate(this.actor.getEmbeddedDocument("Item", li.data("itemId")));
 
-      item.data.coche = value;
+      item.system.coche = value;
 
       this.actor.updateEmbeddedDocuments("Item", [item]);
     });
@@ -97,20 +97,21 @@ export class MinuitActorSheet extends ActorSheet {
     // Get the type of item to create.
     const type = header.dataset.type;
     // Grab any data associated with this control.
-    const data = duplicate(header.dataset);
+    const system = duplicate(header.dataset);
     // Initialize a default name.
     const name = `Nouveau ${type.capitalize()}`;
     // Prepare the item object.
-    const itemData = {
+    const item = {
       name: name,
       type: type,
-      data: data
+      system: system
     };
-    // Remove the type from the dataset since it's in the itemData.type prop.
-    delete itemData.data["type"];
+
+    // Remove the type from the dataset since it's in the item.type prop.
+    delete item.system["type"];
 
     // Finally, create the item!
-    return this.actor.createEmbeddedDocuments("Item",[itemData]).then(item => this.actor.getEmbeddedDocument("Item",item[0].id).sheet.render(true));
+    return this.actor.createEmbeddedDocuments("Item",[item]).then(item => this.actor.getEmbeddedDocument("Item",item[0].id).sheet.render(true));
   }
 
   /**
@@ -124,15 +125,15 @@ export class MinuitActorSheet extends ActorSheet {
     const dataset = element.dataset;
 
     if (dataset.roll) {
-      let roll = new Roll(dataset.roll, this.actor.data.data);
+      let roll = new Roll(dataset.roll, this.actor.system);
       let label = dataset.label ? `Jet de ${dataset.label}` : '';
 
-      const messageData = {
+      const message = {
           flavor: label,
           speaker: ChatMessage.getSpeaker({ actor: this.actor })
       };
 
-      await roll.toMessage(messageData);
+      await roll.toMessage(message);
     }
   }
 }
