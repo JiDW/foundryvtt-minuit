@@ -125,6 +125,11 @@ export class MinuitActorSheet extends ActorSheet {
     const dataset = element.dataset;
 
     if (dataset.roll) {
+      if (dataset.roll.toLowerCase().includes("p")) {
+        let puissance = this.actor.system.aspects.puissance.value;
+        dataset.roll = dataset.roll.toLowerCase().replace("p", puissance);
+      }
+
       let roll = new Roll(dataset.roll, this.actor.system);
       let label = dataset.label ? `Jet de ${dataset.label}` : '';
 
