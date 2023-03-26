@@ -10,17 +10,17 @@ export class MinuitItem extends Item {
     super.prepareData();
 
     // Get the Item's data
-    const itemData = this.data;
-    const actorData = this.actor ? this.actor.data : {};
-    const data = itemData.data;
+    const item = this;
+    const actor = this.actor ? this.actor : {};
+    const system = item.system;
 
   }
 
   // Upon creation, assign a blank image if item is new (not duplicated) instead of mystery-man default
-  static async create(data, options)
+  static async create(system, options)
   {
-    if (!data.img)
-      data.img = "systems/minuit/images/blank.png";
-    super.create(data, options);
+    if (!system.img)
+      system.img = "systems/minuit/images/blank.png";
+    super.create(system, options);
   }
 }

@@ -10,29 +10,29 @@ export class MinuitActor extends Actor {
   prepareData() {
     super.prepareData();
 
-    const actorData = this.data;
-    const data = actorData.data;
-    const flags = actorData.flags;
-    const items = actorData.items;
+    const actor = this;
+    const system = actor.system;
+    const items = actor.items;
     
-    data.possessions = items.filter(item => item.type === "possession").sort((a, b) => a.name.localeCompare(b.name));
+    system.possessions = items.filter(item => item.type === "possession").sort((a, b) => a.name.localeCompare(b.name));
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
-    if (actorData.type === 'character') this._prepareCharacterData(actorData);
-    if (actorData.type === '221b-baker-street') this._prepareCabinetData(actorData);
+    if (actor.type === 'character') this._prepareCharacterData(actor);
+    if (actor.type === '221b-baker-street') this._prepareCabinetData(actor);
   }
 
   /**
    * Prepare Character type specific data
    */
-  _prepareCharacterData(actorData) {
-    const data = actorData.data;
-    const items = actorData.items;
-    data.armes = items.filter(item => item.type === "arme").sort((a, b) => a.name.localeCompare(b.name));
-    data.forces = items.filter(item => item.type === "particularite" && item.system.type==="force").sort((a, b) => a.name.localeCompare(b.name));
-    data.faiblesses = items.filter(item => item.type === "particularite" && item.system.type==="faiblesse").sort((a, b) => a.name.localeCompare(b.name));
-    for (let [key, aspect] of Object.entries(data.aspects)) {
+  _prepareCharacterData(actor) {
+    const system = actor.system;
+    const items = actor.items;
+    system.armes = items.filter(item => item.type === "arme").sort((a, b) => a.name.localeCompare(b.name));
+    system.forces = items.filter(item => item.type === "particularite" && item.system.type==="force").sort((a, b) => a.name.localeCompare(b.name));
+    system.faiblesses = items.filter(item => item.type === "particularite" && item.system.type==="faiblesse").sort((a, b) => a.name.localeCompare(b.name));
+
+    for (let [key, aspect] of Object.entries(system.aspects)) {
       aspect.nom = game.i18n.localize(`MINUIT.Aspects.${key}`);
     }
   }
@@ -40,22 +40,23 @@ export class MinuitActor extends Actor {
   /**
    * Prepare Cabinet type specific data
    */
-  _prepareCabinetData(actorData) {
-    const data = actorData.data;
-    const items = actorData.items;
-    data.historiques = items.filter(item => item.type === "historique").sort((a, b) => a.name.localeCompare(b.name));
-    data.contacts = items.filter(item => item.type === "contact").sort((a, b) => a.system.categorie.localeCompare(b.system.categorie) || a.name.localeCompare(b.name));
+  _prepareCabinetData(actor) {
+    const system = actor.system;
+    const items = actor.items;
+    system.historiques = items.filter(item => item.type === "historique").sort((a, b) => a.name.localeCompare(b.name));
+    system.contacts = items.filter(item => item.type === "contact").sort((a, b) => a.system.categorie.localeCompare(b.system.categorie) || a.name.localeCompare(b.name));
 
-    for (let [key, contact] of Object.entries(data.contacts)) {
+    for (let [key, contact] of Object.entries(system.contacts)) {
       contact.categorieDesc = game.i18n.localize(`MINUIT.CategorieInfluence.${contact.system.categorie}`);
     }
   }
 
-  static async create(data, options)
+  static async create(system, options)
   {
-    if (data.type=="221b-baker-street")
-      data.img = "systems/minuit/images/221b.webp";
-    super.create(data, options);
+    if (system.type=="221b-baker-street")
+      system.img = "systems/minuit/images/221b.webp";
+
+    super.create(system, options);
   }
 
 }
