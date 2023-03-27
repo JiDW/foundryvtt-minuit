@@ -1,0 +1,46 @@
+{
+    "MINUIT.Actor.vie": "Health",
+    "MINUIT.Actor.adrenaline": "Adrenaline",
+    "MINUIT.Actor.ether": "Ether",
+    "MINUIT.Actor.ajouter": "Add",
+
+    "MINUIT.Actor.description": "Description",
+    "MINUIT.Actor.description_biographie": "Biography",
+    "MINUIT.Actor.description_concept": "Concept",
+    "MINUIT.Actor.description_description": "Description",
+    "MINUIT.Actor.description_lieudevie": "Place of residence",
+    "MINUIT.Actor.description_motivation": "Motivation",
+    "MINUIT.Actor.description_quete": "Quest",
+    "MINUIT.Actor.description_evolution": "Evolution",
+    "MINUIT.Actor.description_relations": "Relationships",
+    "MINUIT.Actor.description_allie": "Ally",
+    "MINUIT.Actor.description_nemesis": "Nemesis",
+
+    "MINUIT.Actor.expertises": "Expertises",
+    "MINUIT.Actor.expertises_sociales": "Socials",
+    "MINUIT.Actor.expertises_academiques": "Academics",
+    "MINUIT.Actor.expertises_pratiques": "Handy",
+    "MINUIT.Actor.expertises_combat": "Fight",
+
+    "MINUIT.Actor.particularites": "Peculiarities",
+    "MINUIT.Actor.particularites_valeur": "Value",
+
+    "MINUIT.Actor.equipement": "Equipment",
+    "MINUIT.Actor.equipement_armes": "Weapons",
+    "MINUIT.Actor.equipement_armes_degats": "Damages",
+    "MINUIT.Actor.equipement_possessions": "Belongings",
+
+    "MINUIT.Aspects.agilite": "Agility",
+    "MINUIT.Aspects.perception": "Perception",
+    "MINUIT.Aspects.puissance": "Power",
+    "MINUIT.Aspects.reflexion": "Reflection",
+
+    "MINUIT.ParticulariteTypes.Faiblesse": "Weakness",
+    "MINUIT.ParticulariteTypes.Force": "Strength",
+
+    "MINUIT.CategorieInfluence.informelle": "Informal",
+    "MINUIT.CategorieInfluence.institutionnelle": "Institutional",
+    "MINUIT.CategorieInfluence.intellectuelle": "Intellectual",
+    "MINUIT.CategorieInfluence.interlope": "Underworld",
+    "MINUIT.CategorieInfluence.paranaturelle": "Paranatural"
+}

@@ -1,13 +1,46 @@
 {
-    "MINUIT.Aspects.agilite" : "Agilité",
-    "MINUIT.Aspects.perception" : "Perception",
-    "MINUIT.Aspects.puissance" : "Puissance",
-    "MINUIT.Aspects.reflexion" : "Réflexion",
-    "MINUIT.ParticulariteTypes.Faiblesse" : "Faiblesse",
-    "MINUIT.ParticulariteTypes.Force" : "Force",
-    "MINUIT.CategorieInfluence.informelle" : "Informelle",
-    "MINUIT.CategorieInfluence.institutionnelle" : "Institutionnelle",
-    "MINUIT.CategorieInfluence.intellectuelle" : "Intellectuelle",
-    "MINUIT.CategorieInfluence.interlope" : "Interlope",
-    "MINUIT.CategorieInfluence.paranaturelle" : "Paranaturelle"
+    "MINUIT.Actor.vie": "Vie",
+    "MINUIT.Actor.adrenaline": "Adrénaline",
+    "MINUIT.Actor.ether": "Ether",
+    "MINUIT.Actor.ajouter": "Ajouter",
+
+    "MINUIT.Actor.description": "Description",
+    "MINUIT.Actor.description_biographie": "Biographie",
+    "MINUIT.Actor.description_concept": "Concept",
+    "MINUIT.Actor.description_description": "Description",
+    "MINUIT.Actor.description_lieudevie": "Lieu de vie",
+    "MINUIT.Actor.description_motivation": "Motivation",
+    "MINUIT.Actor.description_quete": "Quête",
+    "MINUIT.Actor.description_evolution": "Evolution",
+    "MINUIT.Actor.description_relations": "Relations",
+    "MINUIT.Actor.description_allie": "Allié",
+    "MINUIT.Actor.description_nemesis": "Némésis",
+
+    "MINUIT.Actor.expertises": "Expertises",
+    "MINUIT.Actor.expertises_sociales": "Sociales",
+    "MINUIT.Actor.expertises_academiques": "Académiques",
+    "MINUIT.Actor.expertises_pratiques": "Pratiques",
+    "MINUIT.Actor.expertises_combat": "De combat",
+
+    "MINUIT.Actor.particularites": "Particularités",
+    "MINUIT.Actor.particularites_valeur": "Valeur",
+
+    "MINUIT.Actor.equipement": "Equipement",
+    "MINUIT.Actor.equipement_armes": "Armes",
+    "MINUIT.Actor.equipement_armes_degats": "Dégâts",
+    "MINUIT.Actor.equipement_possessions": "Possessions",
+
+    "MINUIT.Aspects.agilite": "Agilité",
+    "MINUIT.Aspects.perception": "Perception",
+    "MINUIT.Aspects.puissance": "Puissance",
+    "MINUIT.Aspects.reflexion": "Réflexion",
+
+    "MINUIT.ParticulariteTypes.Faiblesse": "Faiblesse",
+    "MINUIT.ParticulariteTypes.Force": "Force",
+
+    "MINUIT.CategorieInfluence.informelle": "Informelle",
+    "MINUIT.CategorieInfluence.institutionnelle": "Institutionnelle",
+    "MINUIT.CategorieInfluence.intellectuelle": "Intellectuelle",
+    "MINUIT.CategorieInfluence.interlope": "Interlope",
+    "MINUIT.CategorieInfluence.paranaturelle": "Paranaturelle"
 }
