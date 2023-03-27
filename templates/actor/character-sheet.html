@@ -13,7 +13,7 @@
               and it will add a small amount of padding, a border, and will
               center all of its child elements content and text. --}}
               <div class="resource flex-group-center">
-                  <label for="system.vie.value" class="resource-label">{{localize "MINUIT.Actor.vie"}}</label>
+                  <label for="system.vie.value" class="resource-label">{{localize "MINUIT.Character.vie"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.vie.value" value="{{actor.system.vie.value}}" data-dtype="Number"/>
                     <span> / </span>
@@ -21,7 +21,7 @@
                   </div>
               </div>
               <div class="resource flex-group-center">
-                  <label for="system.adrenaline.value" class="resource-label">{{localize "MINUIT.Actor.adrenaline"}}</label>
+                  <label for="system.adrenaline.value" class="resource-label">{{localize "MINUIT.Character.adrenaline"}}</label>
                   <div class="resource-content flexrow flex-center flex-between">
                     <input type="text" name="system.adrenaline.value" value="{{actor.system.adrenaline.value}}" data-dtype="Number"/>
                     <span> / </span>
@@ -29,7 +29,7 @@
                   </div>
               </div>
               <div class="resource flex-group-center">
-                <label for="system.ether.value" class="resource-label">{{localize "MINUIT.Actor.ether"}}</label>
+                <label for="system.ether.value" class="resource-label">{{localize "MINUIT.Character.ether"}}</label>
                 <div class="resource-content flexrow flex-center flex-between">
                   <input type="text" name="system.ether.value" value="{{actor.system.ether.value}}" data-dtype="Number"/>
                 </div>
@@ -52,10 +52,10 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">{{localize "MINUIT.Actor.description"}}</a>
-        <a class="item" data-tab="expertises">{{localize "MINUIT.Actor.expertises"}}</a>
-        <a class="item" data-tab="particularite">{{localize "MINUIT.Actor.particularites"}}</a>
-        <a class="item" data-tab="equipement">{{localize "MINUIT.Actor.equipement"}}</a>
+        <a class="item" data-tab="description">{{localize "MINUIT.Character.description"}}</a>
+        <a class="item" data-tab="expertises">{{localize "MINUIT.Character.expertises"}}</a>
+        <a class="item" data-tab="particularite">{{localize "MINUIT.Character.particularites"}}</a>
+        <a class="item" data-tab="equipement">{{localize "MINUIT.Character.equipement"}}</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -64,26 +64,26 @@
         {{!-- Biography Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
           <div class="row-flex">
-            <h2>{{localize "MINUIT.Actor.description_biographie"}}</h2>
+            <h2>{{localize "MINUIT.Character.description_biographie"}}</h2>
             <ul>
               <li>
-                  <label>{{localize "MINUIT.Actor.description_concept"}}</label>
+                  <label>{{localize "MINUIT.Character.description_concept"}}</label>
                   <input type="text" data-dtype="String" name="system.concept" value="{{actor.system.concept}}" />
               </li>
               <li>
-                  <label>{{localize "MINUIT.Actor.description_description"}}</label>
+                  <label>{{localize "MINUIT.Character.description_description"}}</label>
                   <textarea name="system.description" rows="5" title="Description" data-dtype="String">{{actor.system.description}}</textarea>
               </li>
               <li>
-                  <label>{{localize "MINUIT.Actor.description_lieudevie"}}</label>
+                  <label>{{localize "MINUIT.Character.description_lieudevie"}}</label>
                   <input type="text" data-dtype="String" name="system.lieuVie" value="{{actor.system.lieuVie}}" />
               </li>
               <li>
-                  <label>{{localize "MINUIT.Actor.description_motivation"}}</label>
+                  <label>{{localize "MINUIT.Character.description_motivation"}}</label>
                   <input type="text" data-dtype="String" name="system.motivation" value="{{actor.system.motivation}}" />
               </li>
               <li>
-                  <label>{{localize "MINUIT.Actor.description_quete"}}</label>
+                  <label>{{localize "MINUIT.Character.description_quete"}}</label>
                   <div class="inline-flex">
                     <input type="checkbox" data-dtype="Boolean" {{checked actor.system.quete.case1}} name="system.quete.case1" />
                     <input type="checkbox" data-dtype="Boolean" {{checked actor.system.quete.case2}} name="system.quete.case2" />
@@ -91,21 +91,21 @@
                   </div>
               </li>
               <li>
-                <label>{{localize "MINUIT.Actor.description_evolution"}}</label>
+                <label>{{localize "MINUIT.Character.description_evolution"}}</label>
                 <div class="inline-flex">
                   <input type="text" name="system.evolution.value" value="{{actor.system.evolution.value}}" data-dtype="Number"/>
                   <input type="text" data-dtype="String" name="system.evolution.desc" value="{{actor.system.evolution.desc}}" />
                 </div>
               </li>
             </ul>
-            <h2>{{localize "MINUIT.Actor.description_relations"}}</h2>
+            <h2>{{localize "MINUIT.Character.description_relations"}}</h2>
             <ul>
               <li>
-                  <label>{{localize "MINUIT.Actor.description_allie"}}</label>
+                  <label>{{localize "MINUIT.Character.description_allie"}}</label>
                   <textarea name="system.relations.allie" rows="2" title="Allié" data-dtype="String">{{actor.system.relations.allie}}</textarea>
               </li>
               <li>
-                  <label>{{localize "MINUIT.Actor.description_nemesis"}}</label>
+                  <label>{{localize "MINUIT.Character.description_nemesis"}}</label>
                   <textarea name="system.relations.nemesis" rows="2" title="Némésis" data-dtype="String">{{actor.system.relations.nemesis}}</textarea>
               </li>
             </ul>
@@ -114,7 +114,7 @@
         {{!-- Expertises Tab --}}
         <div class="tab expertises" data-group="primary" data-tab="expertises">
           <div class="expertise">
-            <span class="expertise-name">{{localize "MINUIT.Actor.expertises_sociales"}}</span>
+            <span class="expertise-name">{{localize "MINUIT.Character.expertises_sociales"}}</span>
             <div class="expertise-valeurs">
               <input type="text" name="system.expertises.sociales.value" value="{{actor.system.expertises.sociales.value}}" data-dtype="Number"/>
               <span> / </span>
@@ -123,7 +123,7 @@
             </div>
           </div>
           <div class="expertise">
-            <span class="expertise-name">{{localize "MINUIT.Actor.expertises_academiques"}}</span>
+            <span class="expertise-name">{{localize "MINUIT.Character.expertises_academiques"}}</span>
             <div class="expertise-valeurs">
               <input type="text" name="system.expertises.academiques.value" value="{{actor.system.expertises.academiques.value}}" data-dtype="Number"/>
               <span> / </span>
@@ -132,7 +132,7 @@
             </div>
           </div>
           <div class="expertise">
-            <span class="expertise-name">{{localize "MINUIT.Actor.expertises_pratiques"}}</span>
+            <span class="expertise-name">{{localize "MINUIT.Character.expertises_pratiques"}}</span>
             <div class="expertise-valeurs">
               <input type="text" name="system.expertises.pratiques.value" value="{{actor.system.expertises.pratiques.value}}" data-dtype="Number"/>
               <span> / </span>
@@ -141,7 +141,7 @@
             </div>
           </div>
           <div class="expertise">
-            <span class="expertise-name">{{localize "MINUIT.Actor.expertises_combat"}}</span>
+            <span class="expertise-name">{{localize "MINUIT.Character.expertises_combat"}}</span>
             <div class="expertise-valeurs">
               <input type="text" name="system.expertises.combat.value" value="{{actor.system.expertises.combat.value}}" data-dtype="Number"/>
               <span> / </span>
@@ -156,9 +156,9 @@
             <li class="item flexrow item-header">
               <div class="item-image"></div>
               <div class="item-name">{{localize "MINUIT.ParticulariteTypes.Force"}}</div>
-              <div class="item-name">{{localize "MINUIT.Actor.particularites_valeur"}}</div>
+              <div class="item-name">{{localize "MINUIT.Character.particularites_valeur"}}</div>
               <div class="item-controls">
-                <a class="item-control item-create" title="Ajouter une particularité" data-type="particularite"><i class="fas fa-plus"></i> {{localize "MINUIT.Actor.ajouter"}}</a>
+                <a class="item-control item-create" title="Ajouter une particularité" data-type="particularite"><i class="fas fa-plus"></i> {{localize "MINUIT.Character.ajouter"}}</a>
               </div>
             </li>
           {{#each actor.system.forces as |particularite id|}}
@@ -177,9 +177,9 @@
             <li class="item flexrow item-header">
               <div class="item-image"></div>
               <div class="item-name">{{localize "MINUIT.ParticulariteTypes.Faiblesse"}}</div>
-              <div class="item-name">{{localize "MINUIT.Actor.particularites_valeur"}}</div>
+              <div class="item-name">{{localize "MINUIT.Character.particularites_valeur"}}</div>
               <div class="item-controls">
-                <a class="item-control item-create" title="Ajouter une particularité" data-type="particularite"><i class="fas fa-plus"></i> {{localize "MINUIT.Actor.ajouter"}}</a>
+                <a class="item-control item-create" title="Ajouter une particularité" data-type="particularite"><i class="fas fa-plus"></i> {{localize "MINUIT.Character.ajouter"}}</a>
               </div>
             </li>
           {{#each actor.system.faiblesses as |particularite id|}}
@@ -200,10 +200,10 @@
             <ol class="items-list">
                 <li class="item flexrow item-header">
                   <div class="item-image"></div>
-                  <div class="item-name">{{localize "MINUIT.Actor.equipement_armes"}}</div>
-                  <div class="item-name">{{localize "MINUIT.Actor.equipement_armes_degats"}}</div>
+                  <div class="item-name">{{localize "MINUIT.Character.equipement_armes"}}</div>
+                  <div class="item-name">{{localize "MINUIT.Character.equipement_armes_degats"}}</div>
                   <div class="item-controls">
-                    <a class="item-control item-create" title="Ajouter une arme" data-type="arme"><i class="fas fa-plus"></i> {{localize "MINUIT.Actor.ajouter"}}</a>
+                    <a class="item-control item-create" title="Ajouter une arme" data-type="arme"><i class="fas fa-plus"></i> {{localize "MINUIT.Character.ajouter"}}</a>
                   </div>
                 </li>
             {{#each actor.system.armes as |item id|}}
@@ -222,9 +222,9 @@
             <ol class="items-list">
               <li class="item flexrow item-header">
                 <div class="item-image"></div>
-                <div class="item-name">{{localize "MINUIT.Actor.equipement_possessions"}}</div>
+                <div class="item-name">{{localize "MINUIT.Character.equipement_possessions"}}</div>
                 <div class="item-controls">
-                  <a class="item-control item-create" title="Ajouter un objet" data-type="possession"><i class="fas fa-plus"></i> {{localize "MINUIT.Actor.ajouter"}}</a>
+                  <a class="item-control item-create" title="Ajouter un objet" data-type="possession"><i class="fas fa-plus"></i> {{localize "MINUIT.Character.ajouter"}}</a>
                 </div>
               </li>
           {{#each actor.system.possessions as |item id|}}
