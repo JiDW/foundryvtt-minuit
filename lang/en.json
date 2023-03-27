@@ -30,6 +30,9 @@
     "MINUIT.Actor.equipement_armes_degats": "Damages",
     "MINUIT.Actor.equipement_possessions": "Belongings",
 
+    "MINUIT.Actor.directrice_points_tension": "Tension points",
+    "MINUIT.Actor.directrice_notes": "Notes",
+
     "MINUIT.Aspects.agilite": "Agility",
     "MINUIT.Aspects.perception": "Perception",
     "MINUIT.Aspects.puissance": "Power",
