@@ -36,6 +36,7 @@
     "MINUIT.Character.particularites": "Particularités",
     "MINUIT.Character.particularites_valeur": "Valeur",
     "MINUIT.Character.particularites_ajouter": "Ajouter une particularité",
+    "MINUIT.Character.particularites_use": "Utiliser la particularité",
 
     "MINUIT.Character.equipement": "Equipement",
     "MINUIT.Character.equipement_armes": "Armes",
@@ -99,5 +100,11 @@
     "MINUIT.CategorieInfluence.institutionnelle": "Institutionnelle",
     "MINUIT.CategorieInfluence.intellectuelle": "Intellectuelle",
     "MINUIT.CategorieInfluence.interlope": "Interlope",
-    "MINUIT.CategorieInfluence.paranaturelle": "Paranaturelle"
+    "MINUIT.CategorieInfluence.paranaturelle": "Paranaturelle",
+
+    "MINUIT.Messages.particularite_usage": "Utilisation de la particularité",
+    "MINUIT.Messages.particularite_usage_out_of_adrenaline": "<p>Pas assez d'adrénaline.</p>",
+    "MINUIT.Messages.particularite_usage_added_adrenaline": "<p>Ajout de {value} points d'adrénaline.</p>",
+    "MINUIT.Messages.particularite_usage_used_adrenaline": "<p>Consommation de {value} points adrénaline.</p>",
+    "MINUIT.Messages.dice_throw": "Jet de {aspect}"
 }
