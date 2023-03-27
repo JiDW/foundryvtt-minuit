@@ -5,20 +5,20 @@
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
             <div class="resources flex">
                 <div class="resource flex-group-center situation">
-                    <label class="resource-label">Situation</label>
+                    <label class="resource-label">{{localize "MINUIT.221B.situation"}}</label>
                     <div class="resource-content flexrow flex-center flex-between">
                         <textarea name="system.situation" rows="2" title="Situation" data-dtype="String">{{actor.system.situation}}</textarea>
                     </div>
                 </div>
                 <div class="resource flex-group-center patrimoine">
-                    <label class="resource-label">Patrimoine</label>
+                    <label class="resource-label">{{localize "MINUIT.221B.patrimoine"}}</label>
                     <div class="resource-content flexrow flex-center flex-between">
                         <input type="text" class="patrimoine-input" name="system.patrimoine" value="{{actor.system.patrimoine}}" data-dtype="Number"/>
                     </div>
                 </div>
             </div>
             <div class="resource flex-group-center">
-                <label for="system.adrenaline.value" class="resource-label">Concièrge</label>
+                <label for="system.adrenaline.value" class="resource-label">{{localize "MINUIT.221B.concierge"}}</label>
                 <div class="resource-content flexrow flex-center flex-between">
                     <textarea name="system.concierge" rows="2" title="Concierge" data-dtype="String">{{actor.system.concierge}}</textarea>
                 </div>
@@ -28,10 +28,10 @@
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Etat des lieux</a>
-        <a class="item" data-tab="vitrine">Vitrine</a>
-        <a class="item" data-tab="historique">Historique</a>
-        <a class="item" data-tab="contacts">Contacts</a>
+        <a class="item" data-tab="description">{{localize "MINUIT.221B.etat_lieux"}}</a>
+        <a class="item" data-tab="vitrine">{{localize "MINUIT.221B.vitrine"}}</a>
+        <a class="item" data-tab="historique">{{localize "MINUIT.221B.historique"}}</a>
+        <a class="item" data-tab="contacts">{{localize "MINUIT.221B.contacts"}}</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -40,26 +40,26 @@
         {{!-- Biography Tab --}}
         <div class="tab description" data-group="primary" data-tab="description">
             <div class="row-flex">
-                <h2>Etat des lieux</h2>
+                <h2>{{localize "MINUIT.221B.etat_lieux"}}</h2>
                 <ul>
                     <li>
-                        <label>Sécurité</label>
+                        <label>{{localize "MINUIT.221B.etat_lieux_securite"}}</label>
                         <textarea name="system.etatDesLieux.securite" rows="5" title="Sécurité" data-dtype="String">{{actor.system.etatDesLieux.securite}}</textarea>
                     </li>
                     <li>
-                        <label>Vestibule</label>
+                        <label>{{localize "MINUIT.221B.etat_lieux_vestibule"}}</label>
                         <textarea name="system.etatDesLieux.vestibule" rows="5" title="Vestibule" data-dtype="String">{{actor.system.etatDesLieux.vestibule}}</textarea>
                     </li>
                     <li>
-                        <label>Salon</label>
+                        <label>{{localize "MINUIT.221B.etat_lieux_salon"}}</label>
                         <textarea name="system.etatDesLieux.salon" rows="5" title="Salon" data-dtype="String">{{actor.system.etatDesLieux.salon}}</textarea>
                     </li>
                     <li>
-                        <label>Bureau</label>
+                        <label>{{localize "MINUIT.221B.etat_lieux_bureau"}}</label>
                         <textarea name="system.etatDesLieux.bureau" rows="5" title="Bureau" data-dtype="String">{{actor.system.etatDesLieux.bureau}}</textarea>
                     </li>
                     <li>
-                        <label>Commodités</label>
+                        <label>{{localize "MINUIT.221B.etat_lieux_commodites"}}</label>
                         <textarea name="system.etatDesLieux.commodites" rows="5" title="Commodités" data-dtype="String">{{actor.system.etatDesLieux.commodites}}</textarea>
                     </li>
                 </ul>
@@ -70,9 +70,9 @@
             <ol class="items-list">
                 <li class="item flexrow item-header">
                     <div class="item-image"></div>
-                    <div class="item-name">Nom</div>
+                    <div class="item-name">{{localize "MINUIT.221B.vitrine_nom"}}</div>
                     <div class="item-controls">
-                        <a class="item-control item-create" title="Ajouter un objet" data-type="possession"><i class="fas fa-plus"></i> Ajouter</a>
+                        <a class="item-control item-create" title="Ajouter un objet" data-type="possession"><i class="fas fa-plus"></i> {{localize "MINUIT.221B.ajouter"}}</a>
                     </div>
                 </li>
                 {{#each actor.system.possessions as |possession id|}}
@@ -92,9 +92,9 @@
             <ol class="items-list">
                 <li class="item flexrow item-header">
                     <div class="item-image"></div>
-                    <div class="item-name">Faits</div>
+                    <div class="item-name">{{localize "MINUIT.221B.historique_faits"}}</div>
                     <div class="item-controls">
-                        <a class="item-control item-create" title="Ajouter un historique" data-type="historique"><i class="fas fa-plus"></i> Ajouter</a>
+                        <a class="item-control item-create" title="Ajouter un historique" data-type="historique"><i class="fas fa-plus"></i> {{localize "MINUIT.221B.ajouter"}}</a>
                     </div>
                 </li>
                 {{#each actor.system.historiques as |historique id|}}
@@ -116,10 +116,10 @@
             <ol class="items-list">
                 <li class="item flexrow item-header">
                     <div class="item-image"></div>
-                    <div class="item-name">Categorie</div>
-                    <div class="item-name">Nom</div>
+                    <div class="item-name">{{localize "MINUIT.221B.contacts_categorie"}}</div>
+                    <div class="item-name">{{localize "MINUIT.221B.contacts_nom"}}</div>
                     <div class="item-controls">
-                        <a class="item-control item-create" title="Ajouter un contact" data-type="contact"><i class="fas fa-plus"></i> Ajouter</a>
+                        <a class="item-control item-create" title="Ajouter un contact" data-type="contact"><i class="fas fa-plus"></i> {{localize "MINUIT.221B.ajouter"}}</a>
                     </div>
                 </li>
                 {{#each actor.system.contacts as |contact id|}}

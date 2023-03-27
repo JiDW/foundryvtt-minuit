@@ -33,6 +33,28 @@
     "MINUIT.Directrice.points_tension": "Points de tension",
     "MINUIT.Directrice.notes": "Notes",
 
+    "MINUIT.221B.situation": "Situation",
+    "MINUIT.221B.patrimoine": "Patrimoine",
+    "MINUIT.221B.concierge": "Concierge",
+    "MINUIT.221B.ajouter": "Ajouter",
+
+    "MINUIT.221B.etat_lieux": "Etat des lieux",
+    "MINUIT.221B.etat_lieux_securite": "Sécurité",
+    "MINUIT.221B.etat_lieux_vestibule": "Vestibule",
+    "MINUIT.221B.etat_lieux_salon": "Salon",
+    "MINUIT.221B.etat_lieux_bureau": "Bureau",
+    "MINUIT.221B.etat_lieux_commodites": "Commodités",
+
+    "MINUIT.221B.vitrine": "Vitrine",
+    "MINUIT.221B.vitrine_nom": "Nom",
+
+    "MINUIT.221B.historique": "Historique",
+    "MINUIT.221B.historique_faits": "Faits",
+
+    "MINUIT.221B.contacts": "Contacts",
+    "MINUIT.221B.contacts_categorie": "Categorie",
+    "MINUIT.221B.contacts_nom": "Nom",
+
     "MINUIT.Aspects.agilite": "Agilité",
     "MINUIT.Aspects.perception": "Perception",
     "MINUIT.Aspects.puissance": "Puissance",
