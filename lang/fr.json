@@ -1,4 +1,7 @@
 {
+    "MINUIT.Common.edit": "Editer",
+    "MINUIT.Common.delete": "Supprimer",
+
     "MINUIT.Character.vie": "Vie",
     "MINUIT.Character.adrenaline": "Adrénaline",
     "MINUIT.Character.ether": "Ether",
@@ -24,11 +27,15 @@
 
     "MINUIT.Character.particularites": "Particularités",
     "MINUIT.Character.particularites_valeur": "Valeur",
+    "MINUIT.Character.particularites_ajouter": "Ajouter une particularité",
 
     "MINUIT.Character.equipement": "Equipement",
     "MINUIT.Character.equipement_armes": "Armes",
     "MINUIT.Character.equipement_armes_degats": "Dégâts",
+    "MINUIT.Character.equipement_armes_ajouter": "Ajouter une arme",
+    "MINUIT.Character.equipement_armes_lancer_des": "Lancer les dégats",
     "MINUIT.Character.equipement_possessions": "Possessions",
+    "MINUIT.Character.equipement_possessions_ajouter": "Ajouter un objet",
 
     "MINUIT.Directrice.points_tension": "Points de tension",
     "MINUIT.Directrice.notes": "Notes",
@@ -47,13 +54,16 @@
 
     "MINUIT.221B.vitrine": "Vitrine",
     "MINUIT.221B.vitrine_nom": "Nom",
+    "MINUIT.221B.vitrine_ajouter": "Ajouter un objet",
 
     "MINUIT.221B.historique": "Historique",
     "MINUIT.221B.historique_faits": "Faits",
+    "MINUIT.221B.historique_ajouter": "Ajouter un historique",
 
     "MINUIT.221B.contacts": "Contacts",
     "MINUIT.221B.contacts_categorie": "Categorie",
     "MINUIT.221B.contacts_nom": "Nom",
+    "MINUIT.221B.contacts_ajouter": "Ajouter un contact",
 
     "MINUIT.Arme.degats": "Dégats",
     "MINUIT.Arme.description": "Description",
