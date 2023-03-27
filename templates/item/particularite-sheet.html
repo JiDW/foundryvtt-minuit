@@ -5,11 +5,11 @@
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
             <div class="grid grid-2col">
               <div class="resource">
-                <label class="resource-label">Valeur</label>
+                <label class="resource-label">{{localize "MINUIT.Particularite.valeur"}}</label>
                   <input type="text" name="system.value" value="{{item.system.value}}" data-dtype="Number"/>
               </div>
               <div class="resource">
-                <label class="resource-label">Type</label>
+                <label class="resource-label">{{localize "MINUIT.Particularite.type"}}</label>
                 <select name="system.type" data-dtype="String">
                     {{#select item.system.type}}
                         {{#each particulariteTypes as |type t|}}
@@ -25,7 +25,7 @@
     {{!-- Sheet Body --}}
     <section class="sheet-body">
         <div class="tab active" data-group="primary" data-tab="description">
-            <h2>Description</h2>
+            <h2>{{localize "MINUIT.Particularite.description"}}</h2>
             {{editor item.system.description target="system.description" button=true owner=owner editable=editable}}
         </div>
     </section>

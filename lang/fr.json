@@ -55,6 +55,20 @@
     "MINUIT.221B.contacts_categorie": "Categorie",
     "MINUIT.221B.contacts_nom": "Nom",
 
+    "MINUIT.Arme.degats": "Dégats",
+    "MINUIT.Arme.description": "Description",
+
+    "MINUIT.Contact.categorie": "Catégorie",
+    "MINUIT.Contact.description": "Description",
+
+    "MINUIT.Historique.description": "Description",
+
+    "MINUIT.Particularite.valeur": "Valeur",
+    "MINUIT.Particularite.type": "Type",
+    "MINUIT.Particularite.description": "Description",
+
+    "MINUIT.Possession.description": "Description",
+
     "MINUIT.Aspects.agilite": "Agilité",
     "MINUIT.Aspects.perception": "Perception",
     "MINUIT.Aspects.puissance": "Puissance",
