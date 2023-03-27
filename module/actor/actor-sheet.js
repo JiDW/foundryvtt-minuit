@@ -94,13 +94,13 @@ export class MinuitActorSheet extends ActorSheet {
   _onItemCreate(event) {
     event.preventDefault();
     const header = event.currentTarget;
-    // Get the type of item to create.
+
     const type = header.dataset.type;
-    // Grab any data associated with this control.
     const system = duplicate(header.dataset);
-    // Initialize a default name.
-    const name = `Nouveau ${type.capitalize()}`;
-    // Prepare the item object.
+
+    let typeName = this.getTypeName(type);
+    const name = game.i18n.format("MINUIT.Common.new_item", {item: typeName});
+
     const item = {
       name: name,
       type: type,
@@ -139,6 +139,28 @@ export class MinuitActorSheet extends ActorSheet {
       };
 
       await roll.toMessage(message);
+    }
+  }
+
+  /**
+   * Return a localized name for an item type.
+   * @param {Type} type Type of the item
+   * @returns Localized name of the item.
+   */
+  getTypeName(type) {
+    switch (type) {
+      case "arme":
+        return game.i18n.localize("MINUIT.Type.arme");
+      case "particularite":
+        return game.i18n.localize("MINUIT.Type.particularite");
+      case "possession":
+        return game.i18n.localize("MINUIT.Type.possession");
+      case "historique":
+        return game.i18n.localize("MINUIT.Type.historique");
+      case "contact":
+        return game.i18n.localize("MINUIT.Type.contact");
+      default:
+        return game.i18n.localize("MINUIT.Type.default");
     }
   }
 }

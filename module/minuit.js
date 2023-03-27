@@ -15,9 +15,11 @@ Hooks.once('init', async function() {
   CONFIG.Actor.documentClass = MinuitActor;
   CONFIG.Item.documentClass = MinuitItem;
 
-  // Register sheet application classes
+  // Unregister default sheets.
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("minuit", MinuitActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
+
+  // Register minuit sheets.
+  Actors.registerSheet("minuit", MinuitActorSheet, { makeDefault: true });
   Items.registerSheet("minuit", MinuitItemSheet, { makeDefault: true });
 });

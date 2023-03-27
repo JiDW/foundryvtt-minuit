@@ -1,6 +1,14 @@
 {
     "MINUIT.Common.edit": "Editer",
     "MINUIT.Common.delete": "Supprimer",
+    "MINUIT.Common.new_item": "Nouv. {item}",
+
+    "MINUIT.Type.default": "Objet",
+    "MINUIT.Type.arme": "Arme",
+    "MINUIT.Type.particularite": "Particularité",
+    "MINUIT.Type.possession": "Possession",
+    "MINUIT.Type.historique": "Historique",
+    "MINUIT.Type.contact": "Contact",
 
     "MINUIT.Character.vie": "Vie",
     "MINUIT.Character.adrenaline": "Adrénaline",
