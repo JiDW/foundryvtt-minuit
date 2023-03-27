@@ -29,7 +29,7 @@
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/fr.json"
+      "path": "lang/en.json"
     },
     {
       "lang": "fr",
@@ -38,6 +38,7 @@
     }
   ],
   "socket": false,
+  "initiative": "1d20",
   "gridDistance": 5,
   "gridUnits": "m",
   "primaryTokenAttribute": "vie",
