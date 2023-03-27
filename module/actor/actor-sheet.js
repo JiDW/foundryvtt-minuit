@@ -107,8 +107,14 @@ export class MinuitActorSheet extends ActorSheet {
       system: system
     };
 
-    // Remove the type from the dataset since it's in the item.type prop.
-    delete item.system["type"];
+    // Auto select weakness / strength when creating a particularite.
+    if (type == "particularite") {
+      item.system.type = system.label;
+      delete item.system["label"];
+    } else {
+      // Remove the type from the dataset since it's in the item.type prop.
+      delete item.system["type"];
+    }
 
     // Finally, create the item!
     return this.actor.createEmbeddedDocuments("Item",[item]).then(item => this.actor.getEmbeddedDocument("Item",item[0].id).sheet.render(true));
