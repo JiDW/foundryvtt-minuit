@@ -36,6 +36,7 @@
     "MINUIT.Character.particularites": "Peculiarities",
     "MINUIT.Character.particularites_valeur": "Value",
     "MINUIT.Character.particularites_ajouter": "Add a peculiarity",
+    "MINUIT.Character.particularites_use": "Use the peculiarity",
 
     "MINUIT.Character.equipement": "Equipment",
     "MINUIT.Character.equipement_armes": "Weapons",
@@ -99,5 +100,11 @@
     "MINUIT.CategorieInfluence.institutionnelle": "Institutional",
     "MINUIT.CategorieInfluence.intellectuelle": "Intellectual",
     "MINUIT.CategorieInfluence.interlope": "Underworld",
-    "MINUIT.CategorieInfluence.paranaturelle": "Paranatural"
+    "MINUIT.CategorieInfluence.paranaturelle": "Paranatural",
+
+    "MINUIT.Messages.particularite_usage": "Use of peculiarity",
+    "MINUIT.Messages.particularite_usage_out_of_adrenaline": "<p>Not enough adrenaline.</p>",
+    "MINUIT.Messages.particularite_usage_added_adrenaline": "<p>Added {value} adrenaline points.</p>",
+    "MINUIT.Messages.particularite_usage_used_adrenaline": "<p>Consumption of {value} adrenaline points.</p>",
+    "MINUIT.Messages.dice_throw": "{aspect} throw"
 }

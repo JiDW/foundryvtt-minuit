@@ -82,6 +82,8 @@ export class MinuitActorSheet extends ActorSheet {
 
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
+
+    html.find('.use-particularite').click(this._onUseParticularity.bind(this));
   }
 
   /* -------------------------------------------- */
@@ -137,7 +139,8 @@ export class MinuitActorSheet extends ActorSheet {
       }
 
       let roll = new Roll(dataset.roll, this.actor.system);
-      let label = dataset.label ? `Jet de ${dataset.label}` : '';
+      let aspectName = dataset.label ? this.getAspectName(dataset.label) : '';
+      let label = dataset.label ? game.i18n.format("MINUIT.Messages.dice_throw", {aspect: aspectName}).capitalize() : '';
 
       const message = {
           flavor: label,
@@ -146,6 +149,53 @@ export class MinuitActorSheet extends ActorSheet {
 
       await roll.toMessage(message);
     }
+  }
+
+  /**
+   * Handle click on particularite event.
+   * @param {Event} event The click event.
+   */
+  async _onUseParticularity(event) {
+    event.preventDefault();
+    const dataset = event.currentTarget.dataset;
+
+    let particularite = this.actor.items.filter(item => item.type == "particularite" && item.id == dataset.itemId)[0];
+
+    let currentAdrenaline = this.actor.system.adrenaline.value;
+    let adrenalineMax = this.actor.system.adrenaline.max;
+    let newAdrenaline;
+
+    let message;
+
+    if (particularite.system.type == "force") {
+      if (currentAdrenaline >= particularite.system.value) {
+        newAdrenaline = currentAdrenaline - particularite.system.value;
+        this.actor.update({["system.adrenaline.value"]: newAdrenaline});
+        message = particularite.name;
+        message += game.i18n.format("MINUIT.Messages.particularite_usage_used_adrenaline", {value: particularite.system.value});
+      } else {
+        // Not enough adrenaline.
+        message = particularite.name;
+        message += game.i18n.localize("MINUIT.Messages.particularite_usage_out_of_adrenaline");
+      }
+    } else if (particularite.system.type == "faiblesse") {
+      if (currentAdrenaline + particularite.system.value > adrenalineMax) {
+        newAdrenaline = adrenalineMax;
+      } else {
+        newAdrenaline = currentAdrenaline + particularite.system.value;
+      }
+
+      this.actor.update({["system.adrenaline.value"]: newAdrenaline});
+
+      message = particularite.name;
+      message += game.i18n.format("MINUIT.Messages.particularite_usage_added_adrenaline", {value: particularite.system.value});
+    }
+
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      flavor: game.i18n.localize("MINUIT.Messages.particularite_usage"),
+      content: message
+    });
   }
 
   /**
@@ -167,6 +217,26 @@ export class MinuitActorSheet extends ActorSheet {
         return game.i18n.localize("MINUIT.Type.contact");
       default:
         return game.i18n.localize("MINUIT.Type.default");
+    }
+  }
+
+  /**
+   * Return a localized name for an aspect.
+   * @param {String} aspect Type aspect name.
+   * @returns Localized name of the aspect.
+   */
+  getAspectName(aspect) {
+    switch (aspect) {
+      case "agilite":
+        return game.i18n.localize("MINUIT.Aspects.agilite");
+      case "perception":
+        return game.i18n.localize("MINUIT.Aspects.perception");
+      case "puissance":
+        return game.i18n.localize("MINUIT.Aspects.puissance");
+      case "reflexion":
+        return game.i18n.localize("MINUIT.Aspects.reflexion");
+      default:
+        throw new Error("This aspect does not exists.");
     }
   }
 }
