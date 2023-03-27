@@ -3,7 +3,7 @@
   "id": "minuit",
   "title": "Contes de Minuit",
   "description": "Foundry VTT game system for the french RPG 'Contes de Minuit'",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "compatibility": {
     "minimum": "10",
     "verified": "10.291",
@@ -44,6 +44,6 @@
   "primaryTokenAttribute": "vie",
   "secondaryTokenAttribute": "adrenaline",
   "url": "https://github.com/tortillas5/foundryvtt-minuit",
-  "manifest": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.1/system.json",
-  "download": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.1/system.zip"
+  "manifest": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.2/system.json",
+  "download": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.2/system.zip"
 }
