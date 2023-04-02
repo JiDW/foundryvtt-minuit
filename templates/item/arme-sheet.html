@@ -5,8 +5,8 @@
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
             <div class="grid grid-1col">
               <div class="resource">
-                <label class="resource-label">Dégats</label>
-                  <input type="text" name="data.degats" value="{{data.data.degats}}" data-dtype="String"/>
+                <label class="resource-label">{{localize "MINUIT.Arme.degats"}}</label>
+                  <input type="text" name="system.degats" value="{{item.system.degats}}" data-dtype="String"/>
               </div>
             </div>
         </div>
@@ -15,8 +15,8 @@
     {{!-- Sheet Body --}}
     <section class="sheet-body">
         <div class="tab active" data-group="primary" data-tab="description">
-            <h2>Description</h2>
-            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+            <h2>{{localize "MINUIT.Arme.description"}}</h2>
+            {{editor item.system.description target="system.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>

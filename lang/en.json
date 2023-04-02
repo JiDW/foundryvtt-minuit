@@ -1,0 +1,110 @@
+{
+    "MINUIT.Common.edit": "Edit",
+    "MINUIT.Common.delete": "Delete",
+    "MINUIT.Common.new_item": "New {item}",
+
+    "MINUIT.Type.default": "Item",
+    "MINUIT.Type.arme": "Weapon",
+    "MINUIT.Type.particularite": "Particularity",
+    "MINUIT.Type.possession": "Belonging",
+    "MINUIT.Type.historique": "Historic",
+    "MINUIT.Type.contact": "Contact",
+
+    "MINUIT.Character.vie": "Health",
+    "MINUIT.Character.adrenaline": "Adrenaline",
+    "MINUIT.Character.ether": "Ether",
+    "MINUIT.Character.ajouter": "Add",
+
+    "MINUIT.Character.description": "Description",
+    "MINUIT.Character.description_biographie": "Biography",
+    "MINUIT.Character.description_concept": "Concept",
+    "MINUIT.Character.description_description": "Description",
+    "MINUIT.Character.description_lieudevie": "Place of residence",
+    "MINUIT.Character.description_motivation": "Motivation",
+    "MINUIT.Character.description_quete": "Quest",
+    "MINUIT.Character.description_evolution": "Evolution",
+    "MINUIT.Character.description_relations": "Relationships",
+    "MINUIT.Character.description_allie": "Ally",
+    "MINUIT.Character.description_nemesis": "Nemesis",
+
+    "MINUIT.Character.expertises": "Expertises",
+    "MINUIT.Character.expertises_sociales": "Socials",
+    "MINUIT.Character.expertises_academiques": "Academics",
+    "MINUIT.Character.expertises_pratiques": "Handy",
+    "MINUIT.Character.expertises_combat": "Fight",
+
+    "MINUIT.Character.particularites": "Peculiarities",
+    "MINUIT.Character.particularites_valeur": "Value",
+    "MINUIT.Character.particularites_ajouter": "Add a peculiarity",
+    "MINUIT.Character.particularites_use": "Use the peculiarity",
+
+    "MINUIT.Character.equipement": "Equipment",
+    "MINUIT.Character.equipement_armes": "Weapons",
+    "MINUIT.Character.equipement_armes_degats": "Damages",
+    "MINUIT.Character.equipement_armes_ajouter": "Add a weapon",
+    "MINUIT.Character.equipement_armes_lancer_des": "Throw damages",
+    "MINUIT.Character.equipement_possessions": "Belongings",
+    "MINUIT.Character.equipement_possessions_ajouter": "Add an item",
+
+    "MINUIT.Directrice.points_tension": "Tension points",
+    "MINUIT.Directrice.notes": "Notes",
+
+    "MINUIT.221B.situation": "Location",
+    "MINUIT.221B.patrimoine": "Patrimony",
+    "MINUIT.221B.concierge": "Concierge",
+    "MINUIT.221B.ajouter": "Add",
+
+    "MINUIT.221B.etat_lieux": "Inventory",
+    "MINUIT.221B.etat_lieux_securite": "Security",
+    "MINUIT.221B.etat_lieux_vestibule": "Vestibule",
+    "MINUIT.221B.etat_lieux_salon": "Salon",
+    "MINUIT.221B.etat_lieux_bureau": "Office",
+    "MINUIT.221B.etat_lieux_commodites": "Amenities",
+
+    "MINUIT.221B.vitrine": "Showcase",
+    "MINUIT.221B.vitrine_nom": "Name",
+    "MINUIT.221B.vitrine_ajouter": "Add an item",
+
+    "MINUIT.221B.historique": "Historic",
+    "MINUIT.221B.historique_faits": "Events",
+    "MINUIT.221B.historique_ajouter": "Add an historic",
+
+    "MINUIT.221B.contacts": "Contacts",
+    "MINUIT.221B.contacts_categorie": "Category",
+    "MINUIT.221B.contacts_nom": "Name",
+    "MINUIT.221B.contacts_ajouter": "Add a contact",
+
+    "MINUIT.Arme.degats": "Damages",
+    "MINUIT.Arme.description": "Description",
+
+    "MINUIT.Contact.categorie": "Category",
+    "MINUIT.Contact.description": "Description",
+
+    "MINUIT.Historique.description": "Description",
+
+    "MINUIT.Particularite.valeur": "Value",
+    "MINUIT.Particularite.type": "Type",
+    "MINUIT.Particularite.description": "Description",
+
+    "MINUIT.Possession.description": "Description",
+
+    "MINUIT.Aspects.agilite": "Agility",
+    "MINUIT.Aspects.perception": "Perception",
+    "MINUIT.Aspects.puissance": "Power",
+    "MINUIT.Aspects.reflexion": "Reflection",
+
+    "MINUIT.ParticulariteTypes.Faiblesse": "Weakness",
+    "MINUIT.ParticulariteTypes.Force": "Strength",
+
+    "MINUIT.CategorieInfluence.informelle": "Informal",
+    "MINUIT.CategorieInfluence.institutionnelle": "Institutional",
+    "MINUIT.CategorieInfluence.intellectuelle": "Intellectual",
+    "MINUIT.CategorieInfluence.interlope": "Underworld",
+    "MINUIT.CategorieInfluence.paranaturelle": "Paranatural",
+
+    "MINUIT.Messages.particularite_usage": "Use of peculiarity",
+    "MINUIT.Messages.particularite_usage_out_of_adrenaline": "<p>Not enough adrenaline.</p>",
+    "MINUIT.Messages.particularite_usage_added_adrenaline": "<p>Added {value} adrenaline points.</p>",
+    "MINUIT.Messages.particularite_usage_used_adrenaline": "<p>Consumption of {value} adrenaline points.</p>",
+    "MINUIT.Messages.dice_throw": "{aspect} throw"
+}

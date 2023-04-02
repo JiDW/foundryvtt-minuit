@@ -4,10 +4,10 @@
         <div class="header-fields">
             <div class="resources flex">
                 <div class="resource flex-group-center situation">
-                    <label class="resource-label">Points de tension</label>
+                    <label class="resource-label">{{localize "MINUIT.Directrice.points_tension"}}</label>
                     <div class="resource-content flexrow flex-center flex-between">
                         <button class="tension tension-minus"><i class="fas fa-minus-square"></i></button>
-                        <input type="number" name="data.tension" value="{{data.data.tension}}" data-dtype="Number"/>
+                        <input type="number" name="system.tension" value="{{actor.system.tension}}" data-dtype="Number"/>
                         <button class="tension tension-plus"><i class="fas fa-plus-square"></i></button>
                     </div>
                 </div>
@@ -15,7 +15,7 @@
         </div>
     </header>
     <section class="sheet-body">
-        <h2>Notes</h2>
-        <textarea name="data.notes" rows="40" title="notes" data-dtype="String">{{data.data.notes}}</textarea>
+        <h2>{{localize "MINUIT.Directrice.notes"}}</h2>
+        <textarea name="system.notes" rows="40" title="{{localize "MINUIT.Directrice.notes"}}" data-dtype="String">{{actor.system.notes}}</textarea>
     </section>
 </form>

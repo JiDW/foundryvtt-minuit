@@ -5,9 +5,9 @@
             <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name" /></h1>
             <div class="grid grid-2col">
                 <div class="resource">
-                    <label class="resource-label">Catégorie</label>
-                    <select name="data.categorie" data-dtype="String">
-                    {{#select data.data.categorie}}
+                    <label class="resource-label">{{localize "MINUIT.Contact.categorie"}}</label>
+                    <select name="system.categorie" data-dtype="String">
+                    {{#select item.system.categorie}}
                         {{#each categorieInfluence as |type t|}}
                         <option value="{{t}}">{{type}}</option>
                         {{/each}}
@@ -21,8 +21,8 @@
     {{!-- Sheet Body --}}
     <section class="sheet-body">
         <div class="tab active" data-group="primary" data-tab="description">
-            <h2>Description</h2>
-            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+            <h2>{{localize "MINUIT.Contact.description"}}</h2>
+            {{editor item.system.description target="system.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>

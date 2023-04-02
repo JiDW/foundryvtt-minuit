@@ -17,7 +17,7 @@ export class MinuitItemSheet extends ItemSheet {
   /** @override */
   get template() {
     const path = "systems/minuit/templates/item";
-    return `${path}/${this.item.data.type}-sheet.html`;
+    return `${path}/${this.item.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
@@ -25,13 +25,15 @@ export class MinuitItemSheet extends ItemSheet {
   /** @override */
   getData(options) {
     const data = super.getData(options);
-    if(this.item.data.type == "particularite"){
+
+    if(this.item.type == "particularite"){
       data.particulariteTypes = {
         "force": game.i18n.localize("MINUIT.ParticulariteTypes.Force"),
         "faiblesse": game.i18n.localize("MINUIT.ParticulariteTypes.Faiblesse"),
       }
     }
-    if(this.item.data.type == "contact"){
+
+    if(this.item.type == "contact"){
       data.categorieInfluence = {
         "informelle": game.i18n.localize("MINUIT.CategorieInfluence.informelle"),
         "institutionnelle": game.i18n.localize("MINUIT.CategorieInfluence.institutionnelle"),
@@ -40,6 +42,7 @@ export class MinuitItemSheet extends ItemSheet {
         "paranaturelle": game.i18n.localize("MINUIT.CategorieInfluence.paranaturelle"),
       }
     }
+
     return data;
   }
 

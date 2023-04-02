@@ -30,7 +30,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.rollable:hover, .rollable:focus {
+.rollable:hover, .rollable:focus, .use-particularite:hover, .use-particularite:focus {
   color: #000;
   text-shadow: 0 0 10px red;
   cursor: pointer;
@@ -373,8 +373,8 @@
 
 .minuit .items-list .item-controls {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 60px;
-  flex: 0 0 60px;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
   text-align: right;
 }
 

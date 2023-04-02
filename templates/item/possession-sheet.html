@@ -9,8 +9,8 @@
     {{!-- Sheet Body --}}
     <section class="sheet-body">
         <div class="tab active" data-group="primary" data-tab="description">
-            <h2>Description</h2>
-            {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+            <h2>{{localize "MINUIT.Possession.description"}}</h2>
+            {{editor item.system.description target="system.description" button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>
