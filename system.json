@@ -43,7 +43,7 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "vie",
   "secondaryTokenAttribute": "adrenaline",
-  "url": "https://github.com/tortillas5/foundryvtt-minuit",
-  "manifest": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.2/system.json",
-  "download": "https://github.com/tortillas5/foundryvtt-minuit/releases/download/v1.3.2/system.zip"
+  "url": "https://github.com/JiDW/foundryvtt-minuit",
+  "manifest": "https://github.com/JiDW/foundryvtt-minuit/releases/download/latest/system.json",
+  "download": "https://github.com/JiDW/foundryvtt-minuit/releases/download/v1.3.2/system.zip"
 }
